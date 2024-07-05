@@ -3,22 +3,18 @@
 // import "./test.scss"
 import "./style.css"
 
-import { useEffect, useState } from "react";
 import { Box, BoxProps, Button, Container, Typography } from "@mui/material";
 import { MotionViewport, varFade } from "src/components/animate";
 import { m, MotionProps } from 'framer-motion';
 import { Variant } from "@mui/material/styles/createTypography";
 import AnimatedCursor from "react-animated-cursor";
-// const Splitting = dynamic(() => import('splitting'), {
-//     ssr: false
-// })
+import CarouselCenterMode from "../carousel-view/carousel-center-mode";
+import { _mock } from "src/_mock";
 
 export default function HomeView() {
 
     return (
-        <div style={{
-            // cursor: "url('./cursor.png')"
-        }}>
+        <Box>
             <AnimatedCursor
                 innerSize={100}
                 outerSize={30}
@@ -32,10 +28,11 @@ export default function HomeView() {
             >
                 <img src={"./cursor.png"} />
             </AnimatedCursor>
-            <div className="grid"></div>
+            <div className="grid-anima"></div>
             <div style={{
                 overflow: 'auto',
                 background: 'radial-gradient(circle at center, transparent, #fbfbfbb3)',
+                backgroundPosition: 'top center',
                 position: 'absolute',
                 width: '100%',
             }}>
@@ -45,7 +42,7 @@ export default function HomeView() {
                     backgroundPosition: 'center center',
                     // opacity: 0.65,
                     overflow: 'auto',
-                    height: '100vh'
+                    // height: '100vh'
                 }}>
                     <Container component={MotionViewport}>
                         <Box mt={26} textAlign={'center'} justifyContent={'center'}>
@@ -62,8 +59,27 @@ export default function HomeView() {
                         </Box>
                     </Container>
 
+                    <Box sx={{
+                        width: '100%',
+                        py: 20,
+                        // background: 'radial-gradient(#6796edb3, transparent)',
+                        backgroundImage: "url('./Vector 1335.png')",
+                        backgroundSize: 'cover',
+                        backgroundPositionX: 'center',
+                        backgroundPositionY: 'top',
+                        backgroundRepeat: 'no-repeat'
+                    }}>
+                        <CarouselCenterMode
+                            data={[...Array(20)].map((_, index) => ({
+                                id: _mock.id(index),
+                                title: _mock.postTitle(index),
+                                coverUrl: 'f27.jpg' || _mock.image.cover(index),
+                                description: _mock.description(index),
+                            }))}
+                        />
+                    </Box>
                 </section>
-                <Box width={1} bgcolor={'white'} overflow={'auto'} display={'none'}>
+                <Box width={1} overflow={'auto'}>
                     <h1>hello world</h1>
                     <h1>hello world</h1>
                     <h1>hello world</h1>
@@ -81,9 +97,7 @@ export default function HomeView() {
                     <h1>hello world</h1>
                 </Box>
             </div>
-
-        </div>
-
+        </Box>
     );
 }
 
