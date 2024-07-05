@@ -1,0 +1,25 @@
+.grid {
+    height: 200vh;
+    width: 100%;
+    position: fixed;
+    /* background-color: black; */
+    background-image:
+        linear-gradient(to right, rgb(81 81 81) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(81 81 81) 1px, transparent 1px);
+    background-size: 2.5rem 2.5rem;
+    background-position: center center;
+    background-repeat: repeat;
+    animation: scroll-y infinite linear 10s;
+    margin-top: 0px;
+    overflow-y: hidden;
+}
+
+@keyframes scroll-y {
+    0% {
+        /* transform: translateY(0); */
+    }
+
+    100% {
+        margin-top: -360px
+    }
+}

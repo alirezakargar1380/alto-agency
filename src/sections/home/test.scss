@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
+  // animation-play-state: paused !important;
+}
+
+:root {
+  font-family: "Russo One", sans-serif;
+  --color-gray: #c1c1c1;
+  --easing: cubic-bezier(0.7, 0, 0.15, 1);
+
+  --line-duration: 1.5s;
+  --line-time: calc(var(--line-duration) / 2);
+  --line-delay: 0s;
+
+  --grid-delay: 1s;
+  --grid-duration: 0.3s;
+  --cell-delay: 0.015s;
+  --white-cell-duration: 1.2s;
+  --white-cell-delay: calc(
+    0.25s + var(--line-time) + var(--grid-delay) + var(--grid-duration) +
+      (8 * 6 * var(--cell-delay))
+  );
+  --content-delay: calc(var(--white-cell-delay) + 0.5s);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #c7a17c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-areas:
+    "1 1 1   a   a   a   a a"
+    "2 2 2   2   2   2   2 2"
+    "3 3 3   3   3   3   4 4"
+    "5 5 btm btm btm btm . ."
+    "b b b   7   7   7   7 7"
+    "b b b   8   8   8   8 8";
+
+  > .heading.-top {
+    grid-area: top;
+  }
+  > .heading.-bottom {
+    grid-area: btm;
+  }
+}
+
+header,
+section {
+  //background-color: var(--color-gray);
+}
+
+.heading {
+  font-size: 11vw;
+  margin: 0;
+  overflow: hidden;
+  font-weight: normal;
+  display: grid;
+  align-items: flex-end;
+
+  > span {
+    display: block;
+    animation: slide-up 0.6s cubic-bezier(0.6, 0, 0.3, 1) var(--content-delay)
+      both;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(120%);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@mixin cell($col, $row) {
+  @each $c in $col {
+    @each $r in $row {
+      .cell[style*="col-index:#{$c}"][style*="row-index:#{$r}"] {
+        @content;
+      }
+    }
+  }
+}
+
+.grid-lines,
+.grid-background {
+  grid-area: 1 / 1 / -1 / -1;
+  pointer-events: none;
+}
+
+@mixin cell-to-black {
+  > .cell-inner:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    animation: slide-up var(--white-cell-duration) cubic-bezier(0.5, 0, 0.5, 1)
+      var(--white-cell-delay) both;
+  }
+}
+
+.grid-background {
+  transform-style: preserve-3d;
+  perspective: 600px;
+
+  .cell {
+    transform-style: preserve-3d;
+    background: black;
+
+    animation: grid-in 1s cubic-bezier(0.3, 0, 0.2, 1) both;
+    @keyframes grid-in {
+      from {
+        transform: rotateX(-90deg) scaleY(0) translateY(100%); // translateY(100%)
+      }
+    }
+    animation-delay: calc(
+      var(--line-time) + var(--grid-delay) +
+        (var(--cell-delay) * var(--cell-index))
+    );
+  }
+
+  @include cell($col: 3 4 5 6 7, $row: 0) {
+    background: var(--color-gray);
+  }
+
+  @include cell($col: 0 1 2, $row: 4 5) {
+    background: var(--color-gray);
+  }
+
+  @include cell($col: 4 5, $row: 2) {
+    background: white;
+    @include cell-to-black;
+  }
+  @include cell($col: 2 3 4 5, $row: 3) {
+    background: white;
+    @include cell-to-black;
+  }
+}
+
+/* ---------------------------------- */
+
+.grid-lines {
+  opacity: 0.4;
+
+  .cell {
+    overflow: visible;
+  }
+  /* Hide the first line */
+  .cell:first-child,
+  .cell:first-child .cell-inner {
+    visibility: hidden;
+  }
+
+  --col-size: 100% / var(--col-total); // 8
+  --row-size: 100% / var(--row-total); // 6
+
+  .cell-inner {
+    border: solid 1.5px transparent;
+    // number of sell
+    transform: translate(
+      calc(var(--col-index) * var(--col-size)),
+      calc(var(--row-index) * var(--row-size))
+    );
+    animation: var(--line-duration) var(--easing) var(--line-delay) both;
+  }
+
+  // working on this
+  &[data-horizontal] {
+    .cell-inner {
+      border-top-color: black;
+      animation-name: horizontal-line-in;
+      // transform: translateY(0%);
+      animation-duration: calc(
+        var(--line-duration) + (0.1s * (var(--cell-total) - var(--cell-index)))
+      );
+      @keyframes horizontal-line-in {
+        0% {
+          // transform: translateY(0%);
+        }
+        50% {
+          transform: translateY(-100%); // this is was 100%
+        }
+      }
+    }
+  }
+
+  &[data-vertical] {
+    animation: lines-in var(--line-duration) var(--easing) var(--line-delay)
+      both;
+    @keyframes lines-in {
+      0% {
+        transform: scaleY(0);
+        opacity: 1;
+      }
+      50% {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+      100% {
+      }
+    }
+
+    .cell-inner {
+      border-left-color: black;
+      // border-right-color: black;
+      animation-name: vertical-line-in;
+      @keyframes vertical-line-in {
+        0%,
+        50% {
+          transform: translateX(50%);
+        }
+      }
+    }
+  }
+}
