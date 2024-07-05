@@ -38,11 +38,11 @@ export default function HomeView() {
             }}>
                 <section style={{
                     backgroundImage: "url('./bggb.png')",
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center center',
-                    // opacity: 0.65,
+                    backgroundSize: '100%',
+                    backgroundPositionX: 'center',
+                    backgroundPositionY: 'top',
+                    backgroundRepeat: 'no-repeat',
                     overflow: 'auto',
-                    // height: '100vh'
                 }}>
                     <Container component={MotionViewport}>
                         <Box mt={26} textAlign={'center'} justifyContent={'center'}>
@@ -61,41 +61,52 @@ export default function HomeView() {
 
                     <Box sx={{
                         width: '100%',
-                        py: 20,
-                        // background: 'radial-gradient(#6796edb3, transparent)',
-                        backgroundImage: "url('./Vector 1335.png')",
-                        backgroundSize: 'cover',
-                        backgroundPositionX: 'center',
-                        backgroundPositionY: 'top',
-                        backgroundRepeat: 'no-repeat'
                     }}>
-                        <CarouselCenterMode
-                            data={[...Array(20)].map((_, index) => ({
-                                id: _mock.id(index),
-                                title: _mock.postTitle(index),
-                                coverUrl: 'f27.jpg' || _mock.image.cover(index),
-                                description: _mock.description(index),
-                            }))}
-                        />
+                        <Box
+                            sx={{
+                                width: 1,
+                                background: 'linear-gradient(transparent, #fff, transparent)',
+                            }}
+                        >
+                            <Box sx={{
+                                width: 1,
+                                backgroundImage: "url('./Vector 1335.png')",
+                                backgroundSize: '100%',
+                                backgroundPositionX: 'center',
+                                backgroundPositionY: 'top',
+                                backgroundRepeat: 'no-repeat',
+                                py: 20,
+                            }}>
+                                <CarouselCenterMode
+                                    data={[...Array(20)].map((_, index) => ({
+                                        id: _mock.id(index),
+                                        title: _mock.postTitle(index),
+                                        coverUrl: 'f27.jpg' || _mock.image.cover(index),
+                                        description: _mock.description(index),
+                                    }))}
+                                />
+                                <Box width={1} overflow={'auto'}>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                    <h1>hello world</h1>
+                                </Box>
+                            </Box>
+
+                        </Box>
                     </Box>
                 </section>
-                <Box width={1} overflow={'auto'}>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                    <h1>hello world</h1>
-                </Box>
             </div>
         </Box>
     );
