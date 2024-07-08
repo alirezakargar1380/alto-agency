@@ -38,75 +38,78 @@ export default function HomeView() {
             }}>
                 <section style={{
                     backgroundImage: "url('./bggb.png')",
-                    backgroundSize: '100%',
+                    backgroundSize: 'cover',
                     backgroundPositionX: 'center',
                     backgroundPositionY: 'top',
                     backgroundRepeat: 'no-repeat',
                     overflow: 'auto',
                 }}>
-                    <Container component={MotionViewport}>
-                        <Box mt={26} textAlign={'center'} justifyContent={'center'}>
-                            <TextAnimate text="We create digital magic" variants={varFade().inUp}
-                                px={0.5}
-                                sx={{ width: 1, textAlign: 'center', justifyContent: 'center' }} />
-                            <TextAnimate text="Beauty, creativity, and innovation unleashed."
-                                split=" "
-                                px={0.25}
-                                variant="h6"
-                                variants={varFade().inUp} />
-                            <Typography variant="h5" width={1}></Typography>
-                            <Button variant="contained" color="primary" sx={{ mt: 4 }}>Learn more</Button>
-                        </Box>
-                    </Container>
-
                     <Box sx={{
-                        width: '100%',
+                        background: 'linear-gradient(transparent, transparent, #82a5ff7a)'
                     }}>
-                        <Box
-                            sx={{
-                                width: 1,
-                                background: 'linear-gradient(transparent, #fff, transparent)',
-                            }}
-                        >
-                            <Box sx={{
-                                width: 1,
-                                backgroundImage: "url('./Vector 1335.png')",
-                                backgroundSize: '100%',
-                                backgroundPositionX: 'center',
-                                backgroundPositionY: 'top',
-                                backgroundRepeat: 'no-repeat',
-                                py: 20,
-                            }}>
-                                <CarouselCenterMode
-                                    data={[...Array(20)].map((_, index) => ({
-                                        id: _mock.id(index),
-                                        title: _mock.postTitle(index),
-                                        coverUrl: 'f27.jpg' || _mock.image.cover(index),
-                                        description: _mock.description(index),
-                                    }))}
-                                />
-                                <Box width={1} overflow={'auto'}>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                    <h1>hello world</h1>
-                                </Box>
+                        <Container component={MotionViewport}>
+                            <Box py={26} textAlign={'center'} justifyContent={'center'}>
+                                <TextAnimate text="We create digital magic" variants={varFade().inUp}
+                                    px={0.5}
+                                    sx={{ width: 1, textAlign: 'center', justifyContent: 'center' }} />
+                                <TextAnimate text="Beauty, creativity, and innovation unleashed."
+                                    split=" "
+                                    px={0.25}
+                                    variant="h6"
+                                    variants={varFade().inUp} />
+                                <Typography variant="h5" width={1}></Typography>
+                                <Button variant="contained" color="primary" sx={{ mt: 4 }}>Learn more</Button>
                             </Box>
-
-                        </Box>
+                        </Container>
                     </Box>
                 </section>
+                <Box sx={{
+                    width: '100%',
+                }}>
+                    <Box
+                        sx={{
+                            width: 1,
+                            // background: 'linear-gradient(transparent, #fff, transparent)',
+                        }}
+                    >
+                        <Box sx={{
+                            width: 1,
+                            // backgroundImage: "url('./Vector 1335.png')",
+                            background: 'linear-gradient(#82a5ff7a, #82a5ff7a, #82a5ff7a, #fff, #fff, transparent)',
+                            backgroundSize: 'cover',
+                            backgroundPositionX: 'center',
+                            backgroundPositionY: 'center',
+                            backgroundRepeat: 'no-repeat',
+                            pb: 20,
+                        }}>
+                            <CarouselCenterMode
+                                data={[...Array(20)].map((_, index) => ({
+                                    id: _mock.id(index),
+                                    title: _mock.postTitle(index),
+                                    coverUrl: 'f27.jpg' || _mock.image.cover(index),
+                                    description: _mock.description(index),
+                                }))}
+                            />
+                        </Box>
+                        <Box width={1} overflow={'auto'}>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                            <h1>hello world</h1>
+                        </Box>
+                    </Box>
+                </Box>
             </div>
         </Box>
     );
