@@ -3,7 +3,7 @@
 // import "./test.scss"
 import "./style.css"
 
-import { Box, BoxProps, Button, Container, Typography } from "@mui/material";
+import { Box, BoxProps, Button, Card, Container, Stack, Typography } from "@mui/material";
 import { MotionViewport, varFade } from "src/components/animate";
 import { m, MotionProps } from 'framer-motion';
 import { Variant } from "@mui/material/styles/createTypography";
@@ -11,6 +11,7 @@ import AnimatedCursor from "react-animated-cursor";
 import CarouselCenterMode from "../carousel-view/carousel-center-mode";
 import { _mock } from "src/_mock";
 import MainLayout from "src/layouts/main";
+import Image from "src/components/image";
 
 export default function HomeView() {
 
@@ -118,37 +119,87 @@ export default function HomeView() {
                                 backgroundRepeat: 'no-repeat',
                                 // pb: 20,
                             }}>
-                                <CarouselCenterMode
-                                    data={[
-                                        "/assets/images/Frame 15514.jpg",
-                                        "/assets/images/Frame 142.jpg",
-                                        "/assets/images/Frame 27.jpg",
-                                        "/assets/images/Frame 16140.png",
-                                        "/assets/images/Frame 29.png",
-                                    ].map((url, index) => {
-                                        return {
-                                            id: index.toString(),
-                                            coverUrl: url,
-                                            description: "",
-                                            title: "",
-                                            width: 100 * (index + 1)
-                                        }
-                                    })}
-                                />
+                                <Box sx={{
+                                    pb: 10,
+                                    background: 'linear-gradient(transparent, #82a5ff82, transparent)',
+                                }}>
+                                    <CarouselCenterMode
+                                        data={[
+                                            "/assets/images/Frame 15514.jpg",
+                                            "/assets/images/Frame 142.jpg",
+                                            "/assets/images/Frame 27.jpg",
+                                            "/assets/images/Frame 16140.png",
+                                            "/assets/images/Frame 29.png",
+                                        ].map((url, index) => {
+                                            return {
+                                                id: index.toString(),
+                                                coverUrl: url,
+                                                description: "",
+                                                title: "",
+                                                width: 100 * (index + 1)
+                                            }
+                                        })}
+                                    />
+                                </Box>
                             </Box>
                             <Box sx={{
-                                background: "radial-gradient(circle at center, transparent, #fff, #fff)",
+                                background: "radial-gradient(circle at center, transparent, transparent, #fff, #fff, #fff)",
                                 width: 1,
-                                py: 10
+                                textAlign: 'center',
+                                pb: 16
                             }}>
-                                <Typography variant="h1" width={1} textAlign={'center'}>Steps-by-Step</Typography>
-                                <Typography variant="h6" width={1} textAlign={'center'} color={'text.secondary'}>Step-by-Step to Create your Product</Typography>
-                                <h1>hello world</h1>
-                                <h1>hello world</h1>
-                                <h1>hello world</h1>
-                                <h1>hello world</h1>
-                                <h1>hello world</h1>
-                                <h1>hello world</h1>
+                                <Box sx={{
+                                    background: 'linear-gradient(#fff, #fff, transparent)'
+                                }}>
+                                    <Typography fontSize={30} width={1} fontFamily={'inter-medium'}>How We Bring Ideas to Life</Typography>
+                                    <Typography fontSize={18} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage</Typography>
+                                </Box>
+                                <Stack width={'fit-content'} mx={'auto'} mt={'40px'} spacing={2}>
+                                    <Card sx={{ p: 1 }}>
+                                        <Stack direction={'row'} spacing={3}>
+                                            <Image src='/assets/images/home/Frame 16132.png' />
+                                            <Stack textAlign={'left'} spacing={1}>
+                                                <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 1</Typography>
+                                                <Typography fontFamily={'inter-medium'} fontSize={16}>Client Consultation and Discovery</Typography>
+                                                <Typography fontFamily={'inter-light'} color={"#6F6F6F"} fontSize={12}>Book a 20-minute call to see how we can help <br /> your business grow. No strings attached.</Typography>
+                                            </Stack>
+                                        </Stack>
+                                    </Card>
+                                    <Card sx={{ p: 1 }}>
+                                        <Stack direction={'row'} spacing={3}>
+                                            <Image src='/assets/images/home/Frame 16133.png' />
+                                            <Stack textAlign={'left'} spacing={1}>
+                                                <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 2</Typography>
+                                                <Typography fontFamily={'inter-medium'} fontSize={16}>Design Task Definition and Planning</Typography>
+                                                <Typography fontFamily={'inter-light'} color={"#6F6F6F"} fontSize={12}>
+                                                    Our Design Task Definition and Planning service
+                                                    <br />
+                                                    lays the foundation for successful projects by
+                                                    <br />
+                                                    clearly defining objectives, scope, and
+                                                    <br />
+                                                    requirements.
+                                                </Typography>
+                                            </Stack>
+                                        </Stack>
+                                    </Card>
+                                    <Card sx={{ p: 1 }}>
+                                        <Stack direction={'row'} spacing={3}>
+                                            <Image src='/assets/images/home/Frame 16134.png' />
+                                            <Stack textAlign={'left'} spacing={1}>
+                                                <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 3</Typography>
+                                                <Typography fontFamily={'inter-medium'} fontSize={16}>Product Design and Development <br /> Execution</Typography>
+                                                <Typography fontFamily={'inter-light'} color={"#6F6F6F"} fontSize={12}>
+                                                    Our product design and development execution
+                                                    <br />
+                                                    service ensures every detail aligns with your
+                                                    <br />
+                                                    vision.
+                                                </Typography>
+                                            </Stack>
+                                        </Stack>
+                                    </Card>
+                                </Stack>
                             </Box>
                         </Box>
                     </Box>
