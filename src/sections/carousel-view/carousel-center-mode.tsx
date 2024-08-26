@@ -32,12 +32,28 @@ export default function CarouselCenterMode({ data }: Props) {
     // initialSlide: 1,
     centerPadding: '60px',
     infinite: true,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 5,
+    // slidesToScroll: 5,
     autoplay: true,
     speed: 2000 * 20,
     // autoplaySpeed: 10000,
     cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 760,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      }
+    ]
   });
 
   return (
@@ -74,8 +90,8 @@ function CarouselItem({ item }: CarouselItemProps) {
   const { coverUrl, title } = item;
 
   return (
-    <Box py={10}>
-      <TiltCard halt_rotation_range={20} rotation_range={30}>
+    <Box pb={6}>
+      <TiltCard halt_rotation_range={14} rotation_range={14}>
         <Image alt={title} src={coverUrl} borderRadius={1} />
       </TiltCard>
     </Box>
