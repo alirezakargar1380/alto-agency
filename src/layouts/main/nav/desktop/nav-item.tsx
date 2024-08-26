@@ -88,10 +88,10 @@ const StyledNavItem = styled(ListItemButton, {
       }),
       '&:hover': {
         opacity: 0.64,
-        // backgroundColor: 'transparent',
-        '&:before': {
-          ...dotStyles,
-        },
+        backgroundColor: 'transparent',
+        // '&:before': {
+        //   ...dotStyles,
+        // },
       },
       ...(active && {
         color: theme.palette.primary.main,

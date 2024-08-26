@@ -20,40 +20,40 @@ type Props = {
     title: string;
     coverUrl: string;
     description: string;
+    width: number;
   }[];
 };
 
 export default function CarouselCenterMode({ data }: Props) {
   const carousel = useCarousel({
     // slidesToShow: 4,
-    // autoplay: true,
-    // centerMode: true,
-    // infinite: true,
     // initialSlide: 1,
-    centerPadding: '60px',
+    // centerMode: true,
+    // centerPadding: '60px',
     infinite: true,
-    slidesToShow: 5,
-    // slidesToScroll: 5,
+    // slidesToShow: 5,
+    slidesToScroll: 1,
     autoplay: true,
-    speed: 2000 * 20,
-    // autoplaySpeed: 10000,
+    speed: 2000 * 2,
+    autoplaySpeed: 2000 * 2,
     cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 760,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      }
-    ]
+    variableWidth: true
+    // responsive: [
+    //   {
+    //     breakpoint: 1600,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 760,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //     },
+    //   }
+    // ]
   });
 
   return (
@@ -65,7 +65,7 @@ export default function CarouselCenterMode({ data }: Props) {
     >
       <Carousel ref={carousel.carouselRef} {...carousel.carouselSettings}>
         {data.map((item, ind) => (
-          <Box key={ind} sx={{ px: 1 }}>
+          <Box key={ind} sx={{ px: 1, height: 1, py: 4 }}>
             <CarouselItem item={item} />
           </Box>
         ))}
@@ -91,9 +91,9 @@ function CarouselItem({ item }: CarouselItemProps) {
 
   return (
     <Box pb={6}>
-      <TiltCard halt_rotation_range={14} rotation_range={14}>
-        <Image alt={title} src={coverUrl} borderRadius={1} />
-      </TiltCard>
+      {/* <TiltCard halt_rotation_range={26 / 2} rotation_range={26}> */}
+      <Image alt={title} src={coverUrl} borderRadius={1} />
+      {/* </TiltCard> */}
     </Box>
   );
 }

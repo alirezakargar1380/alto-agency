@@ -119,12 +119,21 @@ export default function HomeView() {
                                 // pb: 20,
                             }}>
                                 <CarouselCenterMode
-                                    data={[...Array(8)].map((_, index) => ({
-                                        id: _mock.id(index),
-                                        title: _mock.postTitle(index),
-                                        coverUrl: 'f27.jpg',
-                                        description: _mock.description(index),
-                                    }))}
+                                    data={[
+                                        "/assets/images/Frame 15514.jpg",
+                                        "/assets/images/Frame 142.jpg",
+                                        "/assets/images/Frame 27.jpg",
+                                        "/assets/images/Frame 16140.png",
+                                        "/assets/images/Frame 29.png",
+                                    ].map((url, index) => {
+                                        return {
+                                            id: index.toString(),
+                                            coverUrl: url,
+                                            description: "",
+                                            title: "",
+                                            width: 100 * (index + 1)
+                                        }
+                                    })}
                                 />
                             </Box>
                             <Box sx={{
