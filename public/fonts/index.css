@@ -19,4 +19,44 @@
   src: local('CircularStd'), url('CircularStd-Bold.otf') format('opentype');
 }
 
- 
+@font-face {
+  font-family: 'inter-light';
+  font-weight: 300;
+  font-style: normal;
+  src: local('inter-light'), url('inter/static/Inter_28pt-Light.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'inter-medium';
+  font-weight: 400;
+  font-style: normal;
+  src: local('inter-medium'), url('inter/Inter.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'inter-bold';
+  font-weight: 400;
+  font-style: normal;
+  src: local('inter-bold'), url('inter/static/Inter_18pt-Bold.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'montserrat-medium';
+  font-weight: 400;
+  font-style: normal;
+  src: local('montserrat-medium'), url('montserrat_3/Montserrat-Medium.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'montserrat-thin';
+  font-weight: 400;
+  font-style: normal;
+  src: local('montserrat-thin'), url('montserrat_3/Montserrat-Thin.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'montserrat-light';
+  font-weight: 400;
+  font-style: normal;
+  src: local('montserrat-light'), url('montserrat_3/Montserrat-Light.ttf') format('opentype');
+}

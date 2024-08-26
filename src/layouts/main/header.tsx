@@ -38,9 +38,6 @@ export default function Header() {
       <Toolbar
         disableGutters
         sx={{
-          minWidth: '775px',
-          borderRadius: 2,
-          mx: 'auto',
           mt: '32px',
           height: {
             xs: HEADER.H_MOBILE,
@@ -50,7 +47,6 @@ export default function Header() {
             easing: theme.transitions.easing.easeInOut,
             duration: theme.transitions.duration.shorter,
           }),
-          bgcolor: "#fff",
           // ...(offsetTop && {
           //   ...bgBlur({
           //     color: theme.palette.background.default,
@@ -61,7 +57,20 @@ export default function Header() {
           // }),
         }}
       >
-        <Container sx={{ height: 1, display: 'flex', alignItems: 'center', width: 1 }}>
+        <Container sx={{
+          height: 1, display: 'flex', alignItems: 'center',
+          width: {
+            md: '775px',
+            sm: 1,
+            xs: 1,
+          },
+          borderRadius: 2,
+          bgcolor: "#fff",
+          mx: {
+            xs: 2,
+            md: 'auto'
+          }
+        }}>
           <Badge
             sx={{
               [`& .${badgeClasses.badge}`]: {

@@ -4,3 +4,6 @@
 /* carousel */
 @import 'slick-carousel/slick/slick.css';
 @import 'slick-carousel/slick/slick-theme.css';
+
+/* Fonts */
+@import './../public/fonts/index.css';

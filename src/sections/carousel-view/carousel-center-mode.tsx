@@ -26,6 +26,7 @@ type Props = {
 
 export default function CarouselCenterMode({ data }: Props) {
   const carousel = useCarousel({
+    className: 'test',
     // slidesToShow: 4,
     // initialSlide: 1,
     // centerMode: true,
@@ -34,10 +35,10 @@ export default function CarouselCenterMode({ data }: Props) {
     // slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000 * 2,
-    autoplaySpeed: 2000 * 2,
+    speed: 2000,
+    autoplaySpeed: 2000,
     cssEase: "linear",
-    variableWidth: true
+    variableWidth: true,
     // responsive: [
     //   {
     //     breakpoint: 1600,
@@ -65,7 +66,7 @@ export default function CarouselCenterMode({ data }: Props) {
     >
       <Carousel ref={carousel.carouselRef} {...carousel.carouselSettings}>
         {data.map((item, ind) => (
-          <Box key={ind} sx={{ px: 1, height: 1, py: 4 }}>
+          <Box key={ind} sx={{ px: 1, height: 1 }}>
             <CarouselItem item={item} />
           </Box>
         ))}
