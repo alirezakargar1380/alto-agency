@@ -284,6 +284,17 @@ export default function HomeView() {
                             <Box sx={{ background: '#F5F5FC', textAlign: 'center' }}>
                                 <Typography fontSize={30} width={1} fontFamily={'inter-medium'}>What make a website better</Typography>
                                 <Typography fontSize={18} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage</Typography>
+                                <Stack direction={'row'} spacing={2} width={'fit-content'} mx={'auto'} mt={6}>
+                                    <Stack spacing={2}>
+                                        <Card sx={{ px: 3, pt: 5, textAlign: 'left' }}>
+                                            <Typography color={"#0440DD"} fontSize={24} fontFamily={'inter-bold'}>01</Typography>
+                                            <Typography fontSize={20} fontFamily={'inter-bold'}>Craft stronger copy.</Typography>
+                                            <Typography fontSize={12} fontFamily={'inter-medium'}>Our approach focuses on creating compelling, clear, and persuasive copy that resonates with your <br /> audience and drives action. </Typography>
+                                        </Card>
+                                        <Card>02</Card>
+                                    </Stack>
+                                    <Card>03</Card>
+                                </Stack>
                             </Box>
                         </Box>
                     </Box>
