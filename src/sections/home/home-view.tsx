@@ -264,36 +264,68 @@ export default function HomeView() {
                                         </Card>
                                         <Card sx={{
                                             border: '3.29px solid #D9D9D9',
-                                            py: 4.8,
+                                            py: 4.5,
                                             px: 3,
                                             textAlign: 'right'
                                         }}>
                                             <Stack textAlign={'left'} justifyContent={'space-between'} direction={'row'} width={1}>
-                                                <Stack direction={'row'}>
-                                                    <Image src="/assets/images/home/icons/Frame 16167.png" />
-                                                    <Typography fontSize={20} mt={1} ml={1}>Brand Identity</Typography>
-                                                </Stack>
-                                                <Image src="/assets/images/home/Group 20864.png" width={'fit-content'} />
+                                                <Box display={'flex'} width={0.8}>
+                                                    <Image src="/assets/images/home/icons/Frame 16167.png" width={'fit-content'} />
+                                                    <Typography fontSize={20} mt={1} ml={1} width={'max-content'}>Brand Identity</Typography>
+                                                </Box>
+                                                <Box>
+                                                    <Image src="/assets/images/home/Group 20864.png" width={'fit-content'} />
+                                                </Box>
                                             </Stack>
                                         </Card>
                                     </Stack>
                                 </Stack>
                             </Box>
                         </Box>
-                        <Box>
+                        <Box bgcolor={'#F5F5FC'} pb={60}>
                             <Box sx={{ background: '#F5F5FC', textAlign: 'center' }}>
                                 <Typography fontSize={30} width={1} fontFamily={'inter-medium'}>What make a website better</Typography>
                                 <Typography fontSize={18} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage</Typography>
                                 <Stack direction={'row'} spacing={2} width={'fit-content'} mx={'auto'} mt={6}>
                                     <Stack spacing={2}>
-                                        <Card sx={{ px: 3, pt: 5, textAlign: 'left' }}>
-                                            <Typography color={"#0440DD"} fontSize={24} fontFamily={'inter-bold'}>01</Typography>
+                                        <Card sx={{ px: 3, pt: 3, textAlign: 'left' }}>
+                                            <Typography color={"#0440DD"} fontSize={24} fontFamily={'inter-bold'} fontWeight={'bold'}>01</Typography>
                                             <Typography fontSize={20} fontFamily={'inter-bold'}>Craft stronger copy.</Typography>
                                             <Typography fontSize={12} fontFamily={'inter-medium'}>Our approach focuses on creating compelling, clear, and persuasive copy that resonates with your <br /> audience and drives action. </Typography>
+                                            <Image src="/assets/images/home/Frame 26104795.png" width={'fit-content'} my={5} />
                                         </Card>
-                                        <Card>02</Card>
+                                        <Card sx={{ pt: 3, textAlign: 'left' }}>
+                                            <Stack spacing={1} px={3}>
+                                                <Typography color={"#0440DD"} fontSize={24} fontFamily={'inter-bold'} fontWeight={'bold'}>03</Typography>
+                                                <Typography fontSize={20} fontFamily={'inter-bold'}>Improved hierarchy and usability</Typography>
+                                                <Typography fontSize={12} fontFamily={'inter-medium'} lineHeight={'20px'}>
+                                                    By organizing information logically and prioritizing key elements, you create a more intuitive <br /> experience that guides users seamlessly through your website. This approach not only makes the <br />content more accessible but also improves user satisfaction and engagement, ultimately driving<br /> better results for your brand.
+                                                </Typography>
+                                            </Stack>
+                                            <Box textAlign={'center'}>
+                                                <Image src="/assets/images/home/Frame 16266.png" width={'fit-content'} />
+                                            </Box>
+                                        </Card>
                                     </Stack>
-                                    <Card>03</Card>
+                                    <Card sx={{ pt: 3, textAlign: 'left' }}>
+                                        <Stack spacing={1} px={3}>
+                                            <Typography color={"#0440DD"} fontSize={24} fontFamily={'inter-bold'} fontWeight={'bold'}>02</Typography>
+                                            <Typography fontSize={20} fontFamily={'inter-bold'}>To enhance trust, leverage the <br /> power of social proof.</Typography>
+                                            <Typography fontSize={12} fontFamily={'inter-medium'} lineHeight={'28px'}>
+                                                Social proof is a powerful tool to enhance trust in your <br />
+                                                brand. By showcasing various forms of validation, you can <br />
+                                                significantly boost credibility and reassure potential
+                                            </Typography>
+                                        </Stack>
+                                        <Box mt={4}
+                                            sx={{
+                                                background: "url('./assets/images/home/Group 208711.png')",
+                                                backgroundSize: 'cover',
+                                            }}
+                                        >
+                                            <Image src="/assets/images/home/comments.png" width={1} ml={4} mt={1} />
+                                        </Box>
+                                    </Card>
                                 </Stack>
                             </Box>
                         </Box>

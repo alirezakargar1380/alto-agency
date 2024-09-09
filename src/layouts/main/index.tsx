@@ -22,6 +22,7 @@ export default function MainLayout({ children }: Props) {
 
       <Box
         component="main"
+        bgcolor={'#F5F5FC'}
         sx={{
           flexGrow: 1,
           ...(!homePage && {
@@ -32,7 +33,7 @@ export default function MainLayout({ children }: Props) {
         {children}
       </Box>
 
-      {/* <Footer /> */}
+      <Footer />
     </Box>
   );
 }
