@@ -16,29 +16,30 @@ import Image from "src/components/image";
 export default function HomeView() {
 
     return (
-        <MainLayout>
-            <Box>
-                <AnimatedCursor
-                    innerSize={100}
-                    outerSize={30}
-                    color='#000'
-                    outerAlpha={1}
-                    innerScale={0.7}
-                    outerScale={5}
-                    outerStyle={{
-                        boxShadow: 'rgba(0, 0, 0, 0.15) 0px 0px 20px',
-                    }}
-                >
-                    <img src={"./cursor.png"} />
-                </AnimatedCursor>
-                <div className="grid-anima"></div>
-                <div style={{
-                    overflow: 'auto',
-                    background: 'radial-gradient(circle at center, transparent, #fbfbfbb3)',
-                    backgroundPosition: 'top center',
-                    position: 'relative',
-                    width: '100%',
-                }}>
+
+        <Box>
+            <AnimatedCursor
+                innerSize={100}
+                outerSize={30}
+                color='#000'
+                outerAlpha={1}
+                innerScale={0.7}
+                outerScale={5}
+                outerStyle={{
+                    boxShadow: 'rgba(0, 0, 0, 0.15) 0px 0px 20px',
+                }}
+            >
+                <img src={"./cursor.png"} />
+            </AnimatedCursor>
+            <div className="grid-anima"></div>
+            <div style={{
+                overflow: 'auto',
+                background: 'radial-gradient(circle at center, transparent, #fbfbfbb3)',
+                backgroundPosition: 'top center',
+                position: 'relative',
+                width: '100%',
+            }}>
+                <MainLayout>
                     <Box sx={{
                         backgroundImage: "url('./bggb.png')",
                         backgroundSize: '100% 101%',
@@ -141,7 +142,7 @@ export default function HomeView() {
                             </Box>
                         </Box>
                         <Box sx={{
-                            background: "radial-gradient(circle at center, transparent, transparent, #F5F5FC, #F5F5FC, #F5F5FC)",
+                            background: "radial-gradient(circle at center, transparent, #F5F5FC, #F5F5FC, #F5F5FC)",
                             width: 1,
                             textAlign: 'center',
                             pb: 16
@@ -330,9 +331,9 @@ export default function HomeView() {
                             </Box>
                         </Box>
                     </Box>
-                </div>
-            </Box>
-        </MainLayout>
+                </MainLayout>
+            </div>
+        </Box>
     );
 }
 

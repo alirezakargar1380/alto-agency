@@ -22,7 +22,6 @@ export default function MainLayout({ children }: Props) {
 
       <Box
         component="main"
-        bgcolor={'#F5F5FC'}
         sx={{
           flexGrow: 1,
           ...(!homePage && {
