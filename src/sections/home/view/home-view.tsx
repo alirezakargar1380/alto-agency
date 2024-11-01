@@ -80,7 +80,7 @@ export default function HomeView() {
                             }
                             // background: 'linear-gradient(transparent, transparent, transparent, #82a5ff7a)'
                         }}>
-                            <Container component={MotionViewport}>
+                            <Container component={MotionViewport} viewport={{ once: true, }}>
                                 <Box py={50} textAlign={'center'} justifyContent={'center'}>
                                     <TextAnimate
                                         text="We create digital magic"
