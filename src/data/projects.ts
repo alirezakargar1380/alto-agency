@@ -19,7 +19,7 @@ export const projects: IProjectItem[] = [
     },
     {
         title: 'WinnerBazi',
-        src: '/assets/images/projects/WinnerBazi.jpg'
+        src: '/assets/images/projects/winnerBazi.jpg'
     },
     {
         title: 'WinnerBazi',
