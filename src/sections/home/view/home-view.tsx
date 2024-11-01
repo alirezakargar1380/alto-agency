@@ -314,7 +314,7 @@ export default function HomeView() {
                                                                 easeIn: 'linear',
                                                                 durationIn: 8,
                                                                 // durationOut: 6,
-                                                            }).infinity}>
+                                                            }).infinity} viewport={{ once: true }}>
                                                                 <Image src="/assets/images/home/Group 20864.png" width={'fit-content'} />
                                                             </m.div>
                                                         </Box>
