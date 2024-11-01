@@ -26,7 +26,10 @@ export default function ProjectItem({ src, title }: IProjectItem) {
                 }
             }}
         >
-            <Box width={'402px'}>
+            <Box width={{
+                xs: 1,
+                md: '402px'
+            }}>
                 <Box height={'300px'}>
                     <Image src={src} width={1} height={1} sx={{ borderRadius: '16px', objectFit: 'cover' }} />
                 </Box>

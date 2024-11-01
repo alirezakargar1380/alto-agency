@@ -59,7 +59,10 @@ export default function Footer() {
         pb: 21,
       }}>
 
-        <Box mx={24}>
+        <Box mx={{
+          xs: 2,
+          md: 24
+        }}>
 
           <Stack
             direction={{

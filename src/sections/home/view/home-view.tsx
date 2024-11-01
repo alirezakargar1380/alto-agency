@@ -86,14 +86,26 @@ export default function HomeView() {
                                         text="We create digital magic"
                                         variants={varFade().inUp}
                                         px={0.5}
-                                        sx={{ width: 1, textAlign: 'center', justifyContent: 'center', fontFamily: 'inter-medium', fontSize: '60px!important' }}
+                                        sx={{
+                                            width: 1, textAlign: 'center', justifyContent: 'center', fontFamily: 'inter-medium',
+                                            fontSize: {
+                                                xs: '30px!important',
+                                                md: '60px!important'
+                                            }
+                                        }}
                                     />
                                     <TextAnimate text="Beauty, creativity, and innovation unleashed."
                                         split=" "
                                         px={0.25}
                                         variants={varFade().inUp}
                                         sx={{
-                                            fontFamily: 'montserrat-light', fontSize: '20px!important',
+                                            width: 1,
+                                            textAlign: 'center', justifyContent: 'center',
+                                            fontFamily: 'montserrat-light',
+                                            fontSize: {
+                                                xs: '14px!important',
+                                                md: '20px!important'
+                                            },
                                             mt: '16px'
                                         }}
                                     />
@@ -160,7 +172,7 @@ export default function HomeView() {
                             <Container component={MotionViewport}>
                                 <Stack width={'fit-content'} mx={'auto'} mt={'40px'} spacing={2}>
                                     <Card sx={{ p: 1 }}>
-                                        <Stack direction={'row'} spacing={3}>
+                                        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
                                             <Image src='/assets/images/home/Frame 16132.png' />
                                             <Stack textAlign={'left'} spacing={1}>
                                                 <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 1</Typography>
@@ -170,7 +182,7 @@ export default function HomeView() {
                                         </Stack>
                                     </Card>
                                     <Card sx={{ p: 1 }}>
-                                        <Stack direction={'row'} spacing={3}>
+                                        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
                                             <Image src='/assets/images/home/Frame 16133.png' />
                                             <Stack textAlign={'left'} spacing={1}>
                                                 <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 2</Typography>
@@ -188,7 +200,7 @@ export default function HomeView() {
                                         </Stack>
                                     </Card>
                                     <Card sx={{ p: 1 }}>
-                                        <Stack direction={'row'} spacing={3}>
+                                        <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
                                             <Image src='/assets/images/home/Frame 16134.png' />
                                             <Stack textAlign={'left'} spacing={1}>
                                                 <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 3</Typography>
