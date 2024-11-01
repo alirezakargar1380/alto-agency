@@ -169,7 +169,7 @@ export default function HomeView() {
                                 <Typography fontSize={30} width={1} fontFamily={'inter-medium'}>How We Bring Ideas to Life</Typography>
                                 <Typography fontSize={18} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage</Typography>
                             </Box>
-                            <Container component={MotionViewport}>
+                            <Container component={MotionContainer}>
                                 <Stack width={'fit-content'} mx={'auto'} mt={'40px'} spacing={2}>
                                     <Card sx={{ p: 1 }}>
                                         <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
@@ -219,7 +219,7 @@ export default function HomeView() {
                             </Container>
                         </Box>
                         <Box bgcolor={'#F5F5FC'}>
-                            <Container component={MotionViewport}>
+                            <Container component={MotionContainer}>
                                 <Box py={20}>
                                     <Box width={'fit-content'} mx={'auto'}>
                                         <Stack direction={{
