@@ -144,6 +144,7 @@ export default function HomeView() {
                                 />
                             </Box>
                         </Box>
+
                         <Box sx={{
                             background: "radial-gradient(circle at center, transparent, #F5F5FC, #F5F5FC, #F5F5FC)",
                             width: 1,
@@ -156,58 +157,63 @@ export default function HomeView() {
                                 <Typography fontSize={30} width={1} fontFamily={'inter-medium'}>How We Bring Ideas to Life</Typography>
                                 <Typography fontSize={18} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage</Typography>
                             </Box>
-                            <Stack width={'fit-content'} mx={'auto'} mt={'40px'} spacing={2}>
-                                <Card sx={{ p: 1 }}>
-                                    <Stack direction={'row'} spacing={3}>
-                                        <Image src='/assets/images/home/Frame 16132.png' />
-                                        <Stack textAlign={'left'} spacing={1}>
-                                            <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 1</Typography>
-                                            <Typography fontFamily={'inter-medium'} fontSize={16}>Client Consultation and Discovery</Typography>
-                                            <Typography fontFamily={'inter-light'} color={"#6F6F6F"} fontSize={12}>Book a 20-minute call to see how we can help <br /> your business grow. No strings attached.</Typography>
+                            <Container component={MotionViewport}>
+                                <Stack width={'fit-content'} mx={'auto'} mt={'40px'} spacing={2}>
+                                    <Card sx={{ p: 1 }}>
+                                        <Stack direction={'row'} spacing={3}>
+                                            <Image src='/assets/images/home/Frame 16132.png' />
+                                            <Stack textAlign={'left'} spacing={1}>
+                                                <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 1</Typography>
+                                                <Typography fontFamily={'inter-medium'} fontSize={16}>Client Consultation and Discovery</Typography>
+                                                <Typography fontFamily={'inter-light'} color={"#6F6F6F"} fontSize={12}>Book a 20-minute call to see how we can help <br /> your business grow. No strings attached.</Typography>
+                                            </Stack>
                                         </Stack>
-                                    </Stack>
-                                </Card>
-                                <Card sx={{ p: 1 }}>
-                                    <Stack direction={'row'} spacing={3}>
-                                        <Image src='/assets/images/home/Frame 16133.png' />
-                                        <Stack textAlign={'left'} spacing={1}>
-                                            <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 2</Typography>
-                                            <Typography fontFamily={'inter-medium'} fontSize={16}>Design Task Definition and Planning</Typography>
-                                            <Typography fontFamily={'inter-light'} color={"#6F6F6F"} fontSize={12}>
-                                                Our Design Task Definition and Planning service
-                                                <br />
-                                                lays the foundation for successful projects by
-                                                <br />
-                                                clearly defining objectives, scope, and
-                                                <br />
-                                                requirements.
-                                            </Typography>
+                                    </Card>
+                                    <Card sx={{ p: 1 }}>
+                                        <Stack direction={'row'} spacing={3}>
+                                            <Image src='/assets/images/home/Frame 16133.png' />
+                                            <Stack textAlign={'left'} spacing={1}>
+                                                <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 2</Typography>
+                                                <Typography fontFamily={'inter-medium'} fontSize={16}>Design Task Definition and Planning</Typography>
+                                                <Typography fontFamily={'inter-light'} color={"#6F6F6F"} fontSize={12}>
+                                                    Our Design Task Definition and Planning service
+                                                    <br />
+                                                    lays the foundation for successful projects by
+                                                    <br />
+                                                    clearly defining objectives, scope, and
+                                                    <br />
+                                                    requirements.
+                                                </Typography>
+                                            </Stack>
                                         </Stack>
-                                    </Stack>
-                                </Card>
-                                <Card sx={{ p: 1 }}>
-                                    <Stack direction={'row'} spacing={3}>
-                                        <Image src='/assets/images/home/Frame 16134.png' />
-                                        <Stack textAlign={'left'} spacing={1}>
-                                            <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 3</Typography>
-                                            <Typography fontFamily={'inter-medium'} fontSize={16}>Product Design and Development <br /> Execution</Typography>
-                                            <Typography fontFamily={'inter-light'} color={"#6F6F6F"} fontSize={12}>
-                                                Our product design and development execution
-                                                <br />
-                                                service ensures every detail aligns with your
-                                                <br />
-                                                vision.
-                                            </Typography>
+                                    </Card>
+                                    <Card sx={{ p: 1 }}>
+                                        <Stack direction={'row'} spacing={3}>
+                                            <Image src='/assets/images/home/Frame 16134.png' />
+                                            <Stack textAlign={'left'} spacing={1}>
+                                                <Typography fontFamily={'inter-bold'} color={"#6C8FFF"} fontSize={16}>Step 3</Typography>
+                                                <Typography fontFamily={'inter-medium'} fontSize={16}>Product Design and Development <br /> Execution</Typography>
+                                                <Typography fontFamily={'inter-light'} color={"#6F6F6F"} fontSize={12}>
+                                                    Our product design and development execution
+                                                    <br />
+                                                    service ensures every detail aligns with your
+                                                    <br />
+                                                    vision.
+                                                </Typography>
+                                            </Stack>
                                         </Stack>
-                                    </Stack>
-                                </Card>
-                            </Stack>
+                                    </Card>
+                                </Stack>
+                            </Container>
                         </Box>
                         <Box bgcolor={'#F5F5FC'}>
                             <Container component={MotionViewport}>
                                 <Box py={20}>
                                     <Box width={'fit-content'} mx={'auto'}>
-                                        <Stack direction={'row'} spacing={2}>
+                                        <Stack direction={{
+                                            xs: 'column',
+                                            md: 'row'
+                                        }} spacing={2}>
                                             <Stack spacing={2}>
                                                 <Card sx={{
                                                     border: '3.29px solid #ABAEFF',
@@ -231,25 +237,30 @@ export default function HomeView() {
                                                 </Card>
                                                 <Card sx={{
                                                     border: '3.29px solid #EEBEFF',
-                                                    background: "url('./assets/images/home/Frame 16233.png')",
-                                                    backgroundRepeat: 'no-repeat',
-                                                    backgroundPosition: 'top right',
-                                                    pb: 3,
-                                                    pl: 3
+                                                    backgroundColor: "#fff",
                                                 }}>
-                                                    <Stack direction={'row'} spacing={6}>
-                                                        <Stack mt={'73px'} spacing={1}>
-                                                            <Image src="/assets/images/home/icons/Frame 16169.png" width={'fit-content'} />
-                                                            <Typography fontSize={20}>Ful-stack Develope</Typography>
-                                                            <Typography fontSize={13.15}>
-                                                                we ensure your mobile presence
-                                                                <br />
-                                                                stands out in a competitive
-                                                                <br />
-                                                                market.
-                                                            </Typography>
+                                                    <Box sx={{
+                                                        background: "url('./assets/images/home/Frame 16233.png')",
+                                                        backgroundRepeat: 'no-repeat',
+                                                        backgroundPosition: 'top right',
+                                                        pb: 3,
+                                                        pl: 3
+                                                    }}>
+                                                        <Stack direction={'row'} spacing={6}>
+                                                            <Stack mt={'73px'} spacing={1}>
+                                                                <Image src="/assets/images/home/icons/Frame 16169.png" width={'fit-content'} />
+                                                                <Typography fontSize={20}>Full-stack Develope</Typography>
+                                                                <Typography fontSize={13.15}>
+                                                                    we ensure your mobile presence
+                                                                    <br />
+                                                                    stands out in a competitive
+                                                                    <br />
+                                                                    market.
+                                                                </Typography>
+                                                            </Stack>
                                                         </Stack>
-                                                    </Stack>
+                                                    </Box>
+
                                                 </Card>
                                             </Stack>
                                             <Stack spacing={2}>
@@ -305,7 +316,10 @@ export default function HomeView() {
                                     <Box sx={{ textAlign: 'center' }}>
                                         <Typography fontSize={30} width={1} fontFamily={'inter-medium'}>What make a website better</Typography>
                                         <Typography fontSize={18} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage</Typography>
-                                        <Stack direction={'row'} spacing={2} width={'fit-content'} mx={'auto'} mt={6}>
+                                        <Stack direction={{
+                                            xs: 'column',
+                                            md: 'row',
+                                        }} spacing={2} width={'fit-content'} mx={'auto'} mt={6}>
                                             <Stack spacing={2}>
                                                 <Card sx={{ px: 3, pt: 3, textAlign: 'left' }}>
                                                     <Typography color={"#0440DD"} fontSize={24} fontFamily={'inter-bold'} fontWeight={'bold'}>01</Typography>
@@ -345,7 +359,6 @@ export default function HomeView() {
                                                     <Image src="/assets/images/home/comments.png" width={1} ml={4} mt={1} />
                                                 </Box>
                                             </Card>
-
                                         </Stack>
                                     </Box>
                                     <HomeProjects />
