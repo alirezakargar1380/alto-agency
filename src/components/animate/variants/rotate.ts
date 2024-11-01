@@ -10,6 +10,22 @@ export const varRotate = (props?: VariantsType) => {
   const easeOut = props?.easeOut;
 
   return {
+    infinity: {
+      initial: { rotate: -360 },
+      animate: {
+        rotate: 0,
+        transition: {
+          repeat: Infinity,
+          ...varTranEnter({ durationIn, easeIn })
+        },
+      },
+      exit: {
+        opacity: 0,
+        rotate: -360,
+        transition: varTranExit({ durationOut, easeOut }),
+      },
+    },
+
     // IN
     in: {
       initial: { opacity: 0, rotate: -360 },
