@@ -4,7 +4,7 @@
 import "./style.css"
 
 import { Box, BoxProps, Button, Card, Container, Stack, Typography } from "@mui/material";
-import { MotionViewport, varFade, varFlip, varPath, varRotate, varSlide } from "src/components/animate";
+import { MotionViewport, varFade, varRotate, varSlide } from "src/components/animate";
 import { m, MotionProps } from 'framer-motion';
 import { Variant } from "@mui/material/styles/createTypography";
 import AnimatedCursor from "react-animated-cursor";
@@ -14,8 +14,7 @@ import MainLayout from "src/layouts/main";
 import Image from "src/components/image";
 import ProjectItem from "../project-item";
 import SvgColor from "src/components/svg-color";
-
-// import { varBounce, MotionContainer } from 'src/components/animate';
+import HomeProjects from "../home-projects";
 
 export default function HomeView() {
 
@@ -302,7 +301,7 @@ export default function HomeView() {
                                         </Stack>
                                     </Box>
                                 </Box>
-                                <Box bgcolor={'#F5F5FC'} pb={60}>
+                                <Box pb={60}>
                                     <Box sx={{ textAlign: 'center' }}>
                                         <Typography fontSize={30} width={1} fontFamily={'inter-medium'}>What make a website better</Typography>
                                         <Typography fontSize={18} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage</Typography>
@@ -349,15 +348,7 @@ export default function HomeView() {
 
                                         </Stack>
                                     </Box>
-                                    <Box py={25} width={'fit-content'} mx={'auto'}>
-                                        <m.div variants={varSlide({
-                                            durationIn: 4,
-                                            distance: 15
-                                        }).inRightLeft}>
-                                            <Typography fontSize={30} width={1} fontFamily={'inter-medium'} textAlign={'center'} mb={'56px'}>Projects</Typography>
-                                        </m.div>
-                                        <ProjectItem title={'Project 1'} src={'/assets/images/projects/908_1x_shots_so.png'} />
-                                    </Box>
+                                    <HomeProjects />
                                 </Box>
                             </Container>
                         </Box>
