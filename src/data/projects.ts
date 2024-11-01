@@ -2,6 +2,10 @@ import { IProjectItem } from "src/sections/home/project-item";
 
 export const projects: IProjectItem[] = [
     {
+        title: 'WinnerBazi',
+        src: '/assets/images/projects/winnerBazi.jpg'
+    },
+    {
         title: 'Smart Way To plan Work',
         src: '/assets/images/projects/908_1x_shots_so.png'
     },
@@ -16,10 +20,6 @@ export const projects: IProjectItem[] = [
     {
         title: 'Smart Way To plan Work',
         src: '/assets/images/projects/908_1x_shots_so 1.png'
-    },
-    {
-        title: 'WinnerBazi',
-        src: '/assets/images/projects/winnerBazi.jpg'
     },
     {
         title: 'WinnerBazi',

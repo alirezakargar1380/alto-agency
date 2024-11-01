@@ -12,7 +12,6 @@ import CarouselCenterMode from "../../carousel-view/carousel-center-mode";
 import { _mock } from "src/_mock";
 import MainLayout from "src/layouts/main";
 import Image from "src/components/image";
-import ProjectItem from "../project-item";
 import SvgColor from "src/components/svg-color";
 import HomeProjects from "../home-projects";
 
@@ -43,7 +42,7 @@ export default function HomeView() {
             }}>
                 <MainLayout>
                     <Box sx={{
-                        backgroundImage: "url('./bggb.png')",
+                        backgroundImage: "url('./bggb-small.png')",
                         backgroundSize: '100% 101%',
                         backgroundPositionX: 'center',
                         backgroundPositionY: 'center',
@@ -80,7 +79,7 @@ export default function HomeView() {
                             }
                             // background: 'linear-gradient(transparent, transparent, transparent, #82a5ff7a)'
                         }}>
-                            <Box component={MotionContainer} viewport={{ once: true, }}>
+                            <Box component={MotionContainer}>
                                 <Box py={{
                                     xs: 25,
                                     md: 50
@@ -313,11 +312,12 @@ export default function HomeView() {
                                                             <Typography fontSize={20} mt={1} ml={1} width={'max-content'}>Brand Identity</Typography>
                                                         </Box>
                                                         <Box>
-                                                            <m.div variants={varRotate({
-                                                                easeIn: 'linear',
-                                                                durationIn: 8,
-                                                                // durationOut: 6,
-                                                            }).infinity} viewport={{ once: true }}>
+                                                            <m.div
+                                                                variants={varRotate({
+                                                                    easeIn: 'linear',
+                                                                    durationIn: 8,
+                                                                    // durationOut: 6,
+                                                                }).infinity}>
                                                                 <Image src="/assets/images/home/Group 20864.png" width={'fit-content'} />
                                                             </m.div>
                                                         </Box>
@@ -408,7 +408,7 @@ function TextAnimate({ text, variants, variant = "h2", split = " ", px, sx, ...o
             {...other}
         >
             {text.split(split).map((letter, index) => (
-                <m.span key={index} variants={variants || varFade().inUp} viewport={{ once: true }}>
+                <m.span key={index} variants={variants || varFade().inUp}>
                     <Box px={px} key={index}>
                         {letter}
                     </Box>

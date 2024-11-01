@@ -29,7 +29,6 @@ export default function HomeProjects() {
                     <ProjectItem title={item.title} key={index} src={item.src} />
                 ))}
             </Box>
-
         </Box>
     )
 }
