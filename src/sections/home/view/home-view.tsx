@@ -4,7 +4,7 @@
 import "./style.css"
 
 import { Box, BoxProps, Button, Card, Container, Stack, Typography } from "@mui/material";
-import { MotionViewport, varFade, varRotate, varSlide } from "src/components/animate";
+import { MotionContainer, MotionViewport, varFade, varRotate, varSlide } from "src/components/animate";
 import { m, MotionProps } from 'framer-motion';
 import { Variant } from "@mui/material/styles/createTypography";
 import AnimatedCursor from "react-animated-cursor";
@@ -80,7 +80,7 @@ export default function HomeView() {
                             }
                             // background: 'linear-gradient(transparent, transparent, transparent, #82a5ff7a)'
                         }}>
-                            <Container component={MotionViewport} viewport={{ once: true, }}>
+                            <Box component={MotionContainer} viewport={{ once: true, }}>
                                 <Box py={50} textAlign={'center'} justifyContent={'center'}>
                                     <TextAnimate
                                         text="We create digital magic"
@@ -115,7 +115,7 @@ export default function HomeView() {
                                         <SvgColor src="/assets/images/home/svg/arrow-right.svg" sx={{ ml: '8px' }} />
                                     </Button>
                                 </Box>
-                            </Container>
+                            </Box>
                         </Box>
                     </Box>
                     <Box sx={{
