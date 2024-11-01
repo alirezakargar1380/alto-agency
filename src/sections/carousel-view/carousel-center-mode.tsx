@@ -31,13 +31,13 @@ export default function CarouselCenterMode({ data }: Props) {
     // initialSlide: 1,
     // centerMode: true,
     // centerPadding: '60px',
-    infinite: true,
+    // infinite: true,
     // slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 2000,
-    cssEase: "linear",
+    // cssEase: "linear",
     variableWidth: true,
     // responsive: [
     //   {

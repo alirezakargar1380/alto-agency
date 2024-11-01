@@ -1,4 +1,4 @@
-import HomeView from "src/sections/home/home-view";
+import HomeView from "src/sections/home/view/home-view";
 // ----------------------------------------------------------------------
 
 export default function HomePage() {
