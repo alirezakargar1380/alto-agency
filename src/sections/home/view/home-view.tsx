@@ -405,7 +405,7 @@ function TextAnimate({ text, variants, variant = "h2", split = " ", px, sx, ...o
             {...other}
         >
             {text.split(split).map((letter, index) => (
-                <m.span key={index} variants={variants || varFade().inUp}>
+                <m.span key={index} variants={variants || varFade().inUp} viewport={{ once: true }}>
                     <Box px={px} key={index}>
                         {letter}
                     </Box>
