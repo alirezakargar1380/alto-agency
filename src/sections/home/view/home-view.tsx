@@ -19,7 +19,7 @@ import HomeProjects from "../home-projects";
 export default function HomeView() {
 
     return (
-        <Box>
+        <Box sx={{ overflowX: 'hidden' }}>
             <AnimatedCursor
                 innerSize={100}
                 outerSize={30}
