@@ -23,13 +23,24 @@ export default function Template({ project }: Props) {
                     xs: 'column',
                     md: 'row',
                 }}
-                alignItems="center" justifyContent={'space-between'}>
+                alignItems="center"
+                justifyContent={'space-between'}
+                sx={{
+                    mt: {
+                        xs: 10,
+                        md: '0px',
+                    },
+                }}
+            >
                 <Box width={500} height={374}>
                     <Image src={src} sx={{ borderRadius: '16px', objectFit: 'cover' }} />
                 </Box>
-                <Box>
+                <Box width={{ xs: 1, md: 'fit-content' }}>
                     <Box
-                        columnGap={24}
+                        columnGap={{
+                            xs: 12,
+                            md: 24,
+                        }}
                         justifyContent={'space-between'}
                         rowGap={'48px'}
                         display="grid"
@@ -42,7 +53,7 @@ export default function Template({ project }: Props) {
                             my: {
                                 xs: 10,
                                 md: '0px',
-                            }
+                            },
                         }}
                     >
                         <Box>
