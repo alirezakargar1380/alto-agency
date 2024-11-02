@@ -10,7 +10,7 @@ function Title({ children }: { children: React.ReactNode }) {
 }
 
 function Content({ children }: { children: React.ReactNode }) {
-    return <Typography fontFamily={'inter-medium'} fontSize={18} whiteSpace={'pre'} mt={'8px'}>{children}</Typography>
+    return <Typography fontFamily={'inter-medium'} fontSize={18} whiteSpace={'break-spaces'} mt={'8px'} width={1}>{children}</Typography>
 }
 
 function Card({ children }: { children: React.ReactNode }) {
@@ -19,7 +19,7 @@ function Card({ children }: { children: React.ReactNode }) {
 
 export default function WinnerBaziContent() {
     return (
-        <Box>
+        <Box width={1}>
             <Card>
                 <Title>About</Title>
                 <Content>

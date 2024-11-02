@@ -18,7 +18,12 @@ export default function Template({ project }: Props) {
 
     return (
         <Container maxWidth={'lg'}>
-            <Stack direction="row" alignItems="center" justifyContent={'space-between'}>
+            <Stack
+                direction={{
+                    xs: 'column',
+                    md: 'row',
+                }}
+                alignItems="center" justifyContent={'space-between'}>
                 <Box width={500} height={374}>
                     <Image src={src} sx={{ borderRadius: '16px', objectFit: 'cover' }} />
                 </Box>
@@ -29,8 +34,15 @@ export default function Template({ project }: Props) {
                         rowGap={'48px'}
                         display="grid"
                         gridTemplateColumns={{
-                            xs: 'repeat(1, 1fr)',
-                            md: 'repeat(2, 1fr)',
+                            xs: 'repeat(2, 1fr)',
+                            // md: 'repeat(2, 1fr)',
+
+                        }}
+                        sx={{
+                            my: {
+                                xs: 10,
+                                md: '0px',
+                            }
                         }}
                     >
                         <Box>
