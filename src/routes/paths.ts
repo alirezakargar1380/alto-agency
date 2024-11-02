@@ -16,6 +16,11 @@ export const paths = {
       register: `${ROOTS.AUTH}/jwt/register`,
     },
   },
+  project: {
+    details: (name: string) => `/projects/${name}`,
+    imgSrc: (name: string) => `/assets/images/projects/${name}`,
+    svgIcon: (name: string) => `/assets/icons/projects/${name}`,
+  },
   // DASHBOARD
   dashboard: {
     root: ROOTS.DASHBOARD,

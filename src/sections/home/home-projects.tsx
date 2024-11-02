@@ -26,7 +26,7 @@ export default function HomeProjects() {
                 }}
             >
                 {projects.map((item, index) => (
-                    <ProjectItem title={item.title} key={index} src={item.src} />
+                    <ProjectItem item={item} key={index} />
                 ))}
             </Box>
         </Box>

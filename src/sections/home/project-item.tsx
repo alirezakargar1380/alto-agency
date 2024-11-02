@@ -4,13 +4,14 @@ import Image from "src/components/image"
 import SvgColor from "src/components/svg-color"
 import { m } from 'framer-motion';
 import { varSlide } from "src/components/animate";
+import { paths } from "src/routes/paths";
+import { IProjectItem } from "src/types/project";
 
-export type IProjectItem = {
-    title: string
-    src: string
+type Props = {
+    item: IProjectItem
 }
 
-export default function ProjectItem({ src, title }: IProjectItem) {
+export default function ProjectItem({ item }: Props) {
     const slideVariant = varSlide({
         durationIn: 4,
         distance: 15
@@ -31,11 +32,11 @@ export default function ProjectItem({ src, title }: IProjectItem) {
                 md: '402px'
             }}>
                 <Box height={'300px'}>
-                    <Image src={src} width={1} height={1} sx={{ borderRadius: '16px', objectFit: 'cover' }} />
+                    <Image src={item.src} width={1} height={1} sx={{ borderRadius: '16px', objectFit: 'cover' }} />
                 </Box>
                 <Stack direction={'row'} justifyContent={'space-between'} alignItems={'normal'} mt={'16px'}>
                     <Typography fontSize={20} fontFamily={'inter-bold'} textAlign={'left'}>
-                        {title}
+                        {item.title}
                     </Typography>
                     <m.div
                         whileHover={{ scale: 1.1, transition: { duration: 1, ease: 'easeInOut' } }}
@@ -44,7 +45,7 @@ export default function ProjectItem({ src, title }: IProjectItem) {
                             distance: 4
                         }).inRightLeft}
                     >
-                        <WhiteButton sx={{ whiteSpace: 'nowrap' }} endIcon={(
+                        <WhiteButton sx={{ whiteSpace: 'nowrap' }} href={paths.project.details(item.title)} endIcon={(
                             <SvgColor src={'/assets/images/home/svg/arrow-south.svg'} color={'#7A7A7A'} sx={{ width: 20, height: 20, pb: '8px' }} />
                         )}>
                             View project
