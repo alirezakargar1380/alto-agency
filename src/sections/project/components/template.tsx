@@ -31,8 +31,6 @@ export default function Template({ project }: Props) {
         tools,
     } = project;
 
-    console.log(tools)
-
     return (
         <Container maxWidth={'lg'}>
             <Stack
@@ -89,9 +87,9 @@ export default function Template({ project }: Props) {
                             <Box
                                 mt={'16px'}
                                 width={1}
-                                columnGap={1}
+                                columnGap={2}
                                 justifyContent={'space-between'}
-                                rowGap={1}
+                                rowGap={2}
                                 display="grid"
                                 gridTemplateColumns={{
                                     xs: 'repeat(3, 1fr)',
