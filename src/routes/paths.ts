@@ -19,6 +19,7 @@ export const paths = {
   project: {
     details: (name: string) => `/projects/${name}`,
     imgSrc: (name: string) => `/assets/images/projects/${name}`,
+    avatarSrc: (name: string) => `/assets/images/avatars/${name}`,
     svgIcon: (name: string) => `/assets/icons/projects/${name}`,
   },
   // DASHBOARD

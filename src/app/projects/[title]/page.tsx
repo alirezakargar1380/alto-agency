@@ -11,11 +11,11 @@ type Props = {
 };
 
 export default function ProjectView({ params }: Props) {
-    const { id } = params;
+    const { title } = params;
 
-    console.log("ddd", id)
+    const decodedTitle = decodeURIComponent(title);
 
-    return <WinnerBaziView
-        project={projects.find((project) => project.title === id) || projects[0]}
-    />;
+    return (<WinnerBaziView
+        project={projects.find((project) => project.title === decodedTitle) || projects[0]}
+    />);
 }

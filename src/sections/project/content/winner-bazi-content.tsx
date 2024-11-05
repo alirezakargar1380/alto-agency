@@ -10,7 +10,7 @@ function Title({ children }: { children: React.ReactNode }) {
 }
 
 function Content({ children }: { children: React.ReactNode }) {
-    return <Typography fontFamily={'inter-medium'} fontSize={18} whiteSpace={'break-spaces'} mt={'8px'} width={1}>{children}</Typography>
+    return <Box fontFamily={'inter-medium'} fontSize={18} whiteSpace={'break-spaces'} mt={'8px'} width={1}>{children}</Box>
 }
 
 function Card({ children }: { children: React.ReactNode }) {
@@ -67,6 +67,8 @@ export default function WinnerBaziContent() {
                 </Content>
             </Card>
             <Card>
+                <br />
+                <br />
                 <Title>Game with Friends:</Title>
                 <Content>
                     {"Create private games and invite your friends to join you in epic battles. \n Enjoy friendly competition and showcase your skills against your closest companions."}

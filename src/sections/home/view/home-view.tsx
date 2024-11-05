@@ -82,7 +82,7 @@ export default function HomeView() {
                             <Box component={MotionContainer}>
                                 <Box py={{
                                     xs: 25,
-                                    md: 50
+                                    md: 35
                                 }} textAlign={'center'} justifyContent={'center'}>
                                     <TextAnimate
                                         text="We create digital magic"
@@ -288,7 +288,7 @@ export default function HomeView() {
                                                         <Box width={'fit-content'}>
                                                             <m.div variants={varSlide({
                                                                 durationIn: 4,
-                                                                distance: 15
+                                                                distance: 10
                                                             }).inRightLeft}>
                                                                 <Image src="/assets/images/home/icons/Frame 16168.png" width={'fit-content'} />
                                                             </m.div>
@@ -306,10 +306,10 @@ export default function HomeView() {
                                                     px: 3,
                                                     textAlign: 'right'
                                                 }}>
-                                                    <Stack textAlign={'left'} justifyContent={'space-between'} direction={'row'} width={1}>
-                                                        <Box display={'flex'} width={0.8}>
-                                                            <Image src="/assets/images/home/icons/Frame 16167.png" width={'fit-content'} />
-                                                            <Typography fontSize={20} mt={1} ml={1} width={'max-content'}>Brand Identity</Typography>
+                                                    <Stack textAlign={'left'} justifyContent={'space-between'} alignItems={'center'} direction={'row'} width={1}>
+                                                        <Box display={'flex'} width={'fit-content'} gap={1}>
+                                                            <Image src="/assets/images/home/icons/Frame 16167.png" width={'44px'} height={'44px'} />
+                                                            <Typography fontSize={20} mt={1} width={'max-content'}>Brand Identity</Typography>
                                                         </Box>
                                                         <Box>
                                                             <m.div

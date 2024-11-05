@@ -1,20 +1,37 @@
 'use client';
 
-import { Box, Container, Stack, SvgIcon, Typography } from "@mui/material";
+import { Avatar, Box, Container, Stack, SvgIcon, Tooltip, Typography } from "@mui/material";
 import Image from "src/components/image";
-import SvgColor from "src/components/svg-color";
-import { paths } from "src/routes/paths";
 import { IProjectItem } from "src/types/project";
+import AvatarGroup, { avatarGroupClasses } from '@mui/material/AvatarGroup';
 
 type Props = {
     project: IProjectItem;
 };
 
+// SVG ICONS
 import StarIcon from './../../../../public/assets/icons/projects/figma-logo.svg';
+import TypescriptIcon from './../../../../public/assets/icons/projects/typescript-icon-logo.svg';
+import PhaserIcon from './../../../../public/assets/icons/projects/phaser-logo.svg';
+
+
+import TiltCard from "src/components/animation/tilt-card";
+import { _mock } from "src/_mock";
+import { paths } from "src/routes/paths";
 
 export default function Template({ project }: Props) {
 
-    const { title, src, duration, content } = project;
+    const {
+        title,
+        src,
+        duration,
+        content,
+        lables,
+        teams,
+        tools,
+    } = project;
+
+    console.log(tools)
 
     return (
         <Container maxWidth={'lg'}>
@@ -32,14 +49,16 @@ export default function Template({ project }: Props) {
                     },
                 }}
             >
-                <Box width={500} height={374}>
-                    <Image src={src} sx={{ borderRadius: '16px', objectFit: 'cover' }} />
-                </Box>
-                <Box width={{ xs: 1, md: 'fit-content' }}>
+                <TiltCard>
+                    <Box width={500} height={374}>
+                        <Image src={src} sx={{ borderRadius: '16px', objectFit: 'cover', width: 1 }} />
+                    </Box>
+                </TiltCard>
+                <Box width={'fit-content'}>
                     <Box
                         columnGap={{
                             xs: 12,
-                            md: 24,
+                            md: 20,
                         }}
                         justifyContent={'space-between'}
                         rowGap={'48px'}
@@ -66,13 +85,48 @@ export default function Template({ project }: Props) {
                         </Box>
                         <Box>
                             <Typography fontSize={14} fontFamily={'inter-medium'}>Tools</Typography>
-                            <Box mt={'16px'}>
-                                <SvgIcon component={StarIcon} color="inherit" viewBox="0 0 24 36" />
+
+                            <Box
+                                mt={'16px'}
+                                width={1}
+                                columnGap={1}
+                                justifyContent={'space-between'}
+                                rowGap={1}
+                                display="grid"
+                                gridTemplateColumns={{
+                                    xs: 'repeat(3, 1fr)',
+                                    // md: 'repeat(2, 1fr)',
+
+                                }}>
+                                {tools?.map((tool, index) => (
+                                    <Tooltip title={tool.alt} key={index}>
+                                        <Box>
+                                            {/* <SvgIcon component={tool.icon} color="inherit" /> */}
+                                            <Image src={tool.icon} sx={{ width: tool.width }} />
+                                        </Box>
+                                    </Tooltip>
+                                ))}
                             </Box>
                         </Box>
                         <Box>
                             <Typography fontSize={14} fontFamily={'inter-medium'}>Teams</Typography>
-                            <Typography mt={'16px'} fontSize={18} fontFamily={'inter-bold'}>{duration}</Typography>
+                            <AvatarGroup
+                                sx={{
+                                    mt: '16px',
+                                    [`& .${avatarGroupClasses.avatar}`]: {
+                                        width: 42,
+                                        height: 42,
+                                    },
+                                }}
+                            >
+                                {teams?.map((team, index) => (
+                                    <Avatar
+                                        key={index}
+                                        alt={team}
+                                        src={team}
+                                    />
+                                ))}
+                            </AvatarGroup>
                         </Box>
                     </Box>
                 </Box>

@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import { m } from 'framer-motion';
 import { varSlide } from "src/components/animate";
-import ProjectItem from "./project-item";
+import ProjectItem from "../project/project-item";
 import { projects } from "src/data/projects";
 
 export default function HomeProjects() {
@@ -22,7 +22,7 @@ export default function HomeProjects() {
                 gridTemplateColumns={{
                     xs: 'repeat(1, 1fr)',
                     sm: 'repeat(2, 1fr)',
-                    md: 'repeat(3, 1fr)',
+                    md: 'repeat(2, 1fr)',
                 }}
             >
                 {projects.map((item, index) => (
