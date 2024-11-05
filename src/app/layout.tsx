@@ -15,10 +15,10 @@ import { AuthProvider } from 'src/auth/context/jwt';
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'Alto agency',
+  title: 'Alto Agency',
   description:
-    'The starting point for your next project with Minimal UI Kit, built on the newest version of Material-UI ©, ready to be customized to your style',
-  keywords: 'react,material,kit,application,dashboard,admin,template',
+    'Alto is an web agency, in Alto we design and develop websites and applications.',
+  keywords: 'react,material,kit,application,dashboard,admin,template,website,webapp,alireza kargar, next.js, js, typescript, tailwindcss, emotion, nextauth',
   themeColor: '#000000',
   manifest: '/manifest.json',
   viewport: { width: 'device-width', initialScale: 1, maximumScale: 1 },

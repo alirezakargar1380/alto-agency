@@ -51,13 +51,13 @@ export default function Template({ project }: Props) {
             >
                 <TiltCard>
                     <Box width={500} height={374}>
-                        <Image src={src} sx={{ borderRadius: '16px', objectFit: 'cover', width: 1 }} />
+                        <Image src={src} sx={{ borderRadius: { xs: '0px', md: '16px' }, objectFit: 'cover', width: 1 }} />
                     </Box>
                 </TiltCard>
                 <Box width={'fit-content'}>
                     <Box
                         columnGap={{
-                            xs: 12,
+                            xs: 16,
                             md: 20,
                         }}
                         justifyContent={'space-between'}

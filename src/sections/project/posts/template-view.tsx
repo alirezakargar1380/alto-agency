@@ -5,7 +5,7 @@ type Props = {
     project: IProjectItem;
 };
 
-export default function WinnerBaziView({ project }: Props) {
+export default function TemplateView({ project }: Props) {
 
     return (<Template project={project} />);
 }

@@ -1,5 +1,5 @@
 import { projects } from "src/data/projects";
-import WinnerBaziView from "src/sections/project/posts/winner-bazi-view";
+import TemplateView from "src/sections/project/posts/template-view";
 
 // ----------------------------------------------------------------------
 
@@ -15,7 +15,7 @@ export default function ProjectView({ params }: Props) {
 
     const decodedTitle = decodeURIComponent(title);
 
-    return (<WinnerBaziView
+    return (<TemplateView
         project={projects.find((project) => project.title === decodedTitle) || projects[0]}
     />);
 }
