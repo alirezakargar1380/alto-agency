@@ -55,7 +55,7 @@ export default function Template({ project }: Props) {
                 <Box width={'fit-content'}>
                     <Box
                         columnGap={{
-                            xs: 16,
+                            xs: 14,
                             md: 20,
                         }}
                         justifyContent={'space-between'}
