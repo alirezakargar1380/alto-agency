@@ -32,21 +32,35 @@ export default function KaranoContent() {
                     <br />
                     these are some of our room door:
                     <ContentImage src={paths.project.imgSrc('723_1x_shots_so.png')} />
-                    after you choose the room door type, and the size of the door, now the carpenter had to calculate the material size that needs to build your doors.
+                    after you choose the room door type, and the size of the door, now the carpenter had to calculate the material size that needs to build your doors. after that he will calculate the final price based on used materials.
                     <br />
                     now you can buy this material and go to your own carpentry and build your door,
                     <br />
-                    or you can choose that your door with your choosen size and material will be build and assemble by karano.
+                    or you can choose that your door will be build and assemble by karano.
+                    <br />
                     <br />
                     <br />
                     <b>New Order System:</b>
                     <br />
+                    so waht is the new way of ordering a door in karano?
+                    <ContentImage src={paths.project.imgSrc('197shots_so.png')} />
+                    <br />
                     these senario was the old way of ordering a door in karano, 
-                    now the karano customers came to our platform and choose their door type, size, and material, 
-                    and then the karano system will calculate the price of the door and the price of the material, and the price of the packaging, and the price of the shipping, and then after the sell manager check the final price that has been calulated by the algorithm is true and the size is buildable, send the order to the customer and the customer will pay the order.
+                    <br />
+                    now the karano customers came to our platform and open a door to buy.
+                    <ContentImage src={paths.project.imgSrc('475shots_so.png')} />
+                    based on product that user choose to buy, The materials that the users can use to make their product will change:
+                    <ContentImage src={paths.project.imgSrc('276shots_so.png')} />
+                    After the users register their order, their order is sent to the shipping manager and the algorithm calculates the price and the amount of material needed for the order items.
+                    <br />
+                    for example for building the top door we need these materials:
+                    <ContentImage src={paths.project.imgSrc('826_2x_shots_so.png')} />
+                    every thing was calculate and manage just by our server! 
+                    <br />
+                    Less manpower was involved, order entry and order management were faster, and sales invoices were issued faster
                     <br />
                     <br />
-                    after the customer pay the order, if the customer choose that the door assemble by karano, the karano system will send the order to the producton line and the production line receives a PDF file that contains the materials with their sizes that need to build the door.
+                    after the customer pay their invoice, if the customer choose that the door assemble by karano, the karano system will send the order to the producton line and the production line receives a PDF file that contains the materials with their sizes that need to build the door.
                     <br />
                     after production manager build the order products, send the order to storage manager, and the storage manager will pack the order and send the order to the shipping department.
                 </Content>
@@ -66,13 +80,14 @@ export default function KaranoContent() {
             <Card>
                 <Title>About Platform:</Title>
                 <Content>
-                    <b>Here are some of the most special features in the My Camp project:</b>
+                    <b>Here are some of the most special features in the Karano project:</b>
                     <List
                         items={[
                             'Set Price by part material - for example cabinet profile with oak cover is $50 / with raw cover is $30',
                             'ability to order custom made products',
                             'calculate the size of material that needs to be cut for each product and calculate the price of that size',
                             'calculate assemble price of each product',
+                            'Price caalculation algorithm based on product',
                         ]}
                     />
                 </Content>
