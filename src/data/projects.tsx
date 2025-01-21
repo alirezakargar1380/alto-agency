@@ -5,6 +5,7 @@ import { paths } from "src/routes/paths";
 import svg from "./icons";
 import MyCampContent from "src/sections/project/content/my-camp-content";
 import DefitunesContent from "src/sections/project/content/defitunes-content";
+import KaranoContent from "src/sections/project/content/karano-content";
 
 const ali = paths.project.avatarSrc('ali.png');
 const me = paths.project.avatarSrc('alireza.png');
@@ -30,20 +31,21 @@ const label: Record<string, IProjectLabel> = {
 
 export const projects: IProjectItem[] = [
     {
+        title: 'Karano',
+        src: paths.project.imgSrc('29_1x_shots_so.png'),
+        duration: '2024 - 2025',
+        link: 'https://karano.online/',
+        lables: [label.fullStack, label.ui_ux, label.live],
+        tools: [svg.ts, svg.nodeJs, svg.nestJs, svg.react, svg.figma, svg.mui, svg.mySql, svg.next],
+        teams: [me, ali],
+        content: <KaranoContent />
+    },
+    {
         title: 'Winner Bazi',
         src: paths.project.imgSrc('winnerBazi.jpg'),
         duration: '2022 - 2023',
         lables: [label.backend],
         tools: [svg.ts, svg.phaser, svg.socket, svg.express, svg.nodeJs],
-        teams: [me],
-        content: <WinnerBaziContent />
-    },
-    {
-        title: 'Karano',
-        src: paths.project.imgSrc('29_3x_shots_so.png'),
-        duration: '2024 - 2025',
-        lables: [label.fullStack, label.ui_ux, label.live],
-        tools: [svg.ts, svg.nodeJs, svg.nestJs, svg.react, svg.figma, svg.mui],
         teams: [me],
         content: <WinnerBaziContent />
     },

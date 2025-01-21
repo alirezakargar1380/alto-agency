@@ -21,9 +21,19 @@ export default {
         alt: 'Express JS',
         width: 30
     },
+    next: {
+        icon: paths.project.svgIcon('next.png'),
+        alt: 'Next JS',
+        width: 30
+    },
     ts: {
         icon: paths.project.svgIcon('typescript-icon logo.png'),
         alt: 'TypeScript',
+        width: 30
+    },
+    mySql: {
+        icon: paths.project.svgIcon('my-sql.png'),
+        alt: 'My Sql Database',
         width: 30
     },
     mui: {

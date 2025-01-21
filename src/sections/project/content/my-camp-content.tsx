@@ -29,7 +29,7 @@ export default function MyCampContent() {
                 </Content>
             </Card>
             <Card>
-                <Title>About Plathform:</Title>
+                <Title>About Platform:</Title>
                 <Content>
                     <b>Here are some of the most special features in the My Camp project:</b>
                     <List
