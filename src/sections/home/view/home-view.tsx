@@ -136,7 +136,7 @@ export default function HomeView() {
                             // pb: 20,
                         }}>
                             <Box sx={{
-                                pb: 10,
+                                // pb: 10,
                                 background: 'linear-gradient(transparent, #82a5ff82, transparent)',
                             }}>
                                 <CarouselCenterMode
@@ -169,7 +169,9 @@ export default function HomeView() {
                                 background: 'linear-gradient(#F5F5FC, #F5F5FC, transparent)'
                             }}>
                                 <Typography fontSize={30} width={1} fontFamily={'inter-medium'}>How We Bring Ideas to Life</Typography>
-                                <Typography fontSize={18} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage</Typography>
+                                <Typography fontSize={{ xs: 14, md: 18 }} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>
+                                    our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage
+                                </Typography>
                             </Box>
                             <Container component={MotionContainer}>
                                 <Stack width={'fit-content'} mx={'auto'} mt={'40px'} spacing={2}>
