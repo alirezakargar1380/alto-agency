@@ -173,7 +173,7 @@ export default function HomeView() {
                             </Box>
                             <Container component={MotionContainer}>
                                 <Stack width={'fit-content'} mx={'auto'} mt={'40px'} spacing={2}>
-                                    <Card sx={{ p: 1 }}>
+                                    <Card sx={{ p: 1.5 }}>
                                         <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
                                             <Image src='/assets/images/home/Frame 16132.png' />
                                             <Stack textAlign={'left'} spacing={1}>
@@ -183,7 +183,7 @@ export default function HomeView() {
                                             </Stack>
                                         </Stack>
                                     </Card>
-                                    <Card sx={{ p: 1 }}>
+                                    <Card sx={{ p: 1.5 }}>
                                         <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
                                             <Image src='/assets/images/home/Frame 16133.png' />
                                             <Stack textAlign={'left'} spacing={1}>
@@ -201,7 +201,7 @@ export default function HomeView() {
                                             </Stack>
                                         </Stack>
                                     </Card>
-                                    <Card sx={{ p: 1 }}>
+                                    <Card sx={{ p: 1.5 }}>
                                         <Stack direction={{ xs: 'column', md: 'row' }} spacing={3}>
                                             <Image src='/assets/images/home/Frame 16134.png' />
                                             <Stack textAlign={'left'} spacing={1}>
@@ -330,7 +330,9 @@ export default function HomeView() {
                                 <Box pb={60}>
                                     <Box sx={{ textAlign: 'center' }}>
                                         <Typography fontSize={30} width={1} fontFamily={'inter-medium'}>What make a website better</Typography>
-                                        <Typography fontSize={18} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage</Typography>
+                                        <Typography fontSize={{ xs: 14, md: 18 }} width={1} mt={'10px'} fontFamily={'inter-medium'} color={'text.secondary'}>
+                                            our design workflow is meticulously crafted to ensure <br /> clarity, efficiency, and excellence at every stage
+                                        </Typography>
                                         <Stack direction={{
                                             xs: 'column',
                                             md: 'row',
