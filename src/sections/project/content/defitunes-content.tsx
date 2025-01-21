@@ -46,15 +46,6 @@ export default function DefitunesContent() {
                     <ContentImage src={paths.project.imgSrc('101shots_so.png')} />
                 </Content>
             </Card>
-            <Card>
-                <br />
-                <br />
-                <Title>Game with Friends:</Title>
-                <Content>
-                    {"Create private games and invite your friends to join you in epic battles. \n Enjoy friendly competition and showcase your skills against your closest companions."}
-                    <ContentImage src={paths.project.imgSrc('large_c7_Q1_T42nl_Icf_YUD_6gj5_E_478ed236e1.png')} />
-                </Content>
-            </Card>
         </Box>
     )
 }
