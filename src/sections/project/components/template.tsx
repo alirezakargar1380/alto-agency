@@ -50,7 +50,7 @@ export default function Template({ project }: Props) {
                 }}
             >
                 <TiltCard>
-                    <Box width={500} height={374}>
+                    <Box width={{ xs: 1, md: 500 }} height={374}>
                         <Image src={src} sx={{ borderRadius: { xs: '0px', md: '16px' }, objectFit: 'cover', width: 1 }} />
                     </Box>
                 </TiltCard>
