@@ -47,19 +47,20 @@ export default function KaranoContent() {
                     <br />
                     these senario was the old way of ordering a door in karano, 
                     <br />
-                    now the karano customers came to our platform and open a door to buy.
+                    now the karano customers came to our platform and choose a product to buy...
                     <ContentImage src={paths.project.imgSrc('475shots_so.png')} />
                     based on product that user choose to buy, The materials that the users can use to make their product will change:
                     <ContentImage src={paths.project.imgSrc('276shots_so.png')} />
                     After the users register their order, their order is sent to the shipping manager and the algorithm calculates the price and the amount of material needed for the order items.
                     <br />
-                    for example for building the top door we need these materials:
+                    for example for building the top order we need these materials:
                     <ContentImage src={paths.project.imgSrc('826_2x_shots_so.png')} />
                     every thing was calculate and manage just by our server! 
                     <br />
                     Less manpower was involved, order entry and order management were faster, and sales invoices were issued faster
                     <br />
                     <br />
+                    <Title>Production Line</Title>
                     after the customer pay their invoice, if the customer choose that the door assemble by karano, the karano system will send the order to the producton line and the production line receives a PDF file that contains the materials with their sizes that need to build the door.
                     <br />
                     after production manager build the order products, send the order to storage manager, and the storage manager will pack the order and send the order to the shipping department.
