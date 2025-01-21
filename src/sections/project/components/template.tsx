@@ -69,8 +69,8 @@ export default function Template({ project }: Props) {
                         }}
                         sx={{
                             my: {
-                                xs: 10,
-                                md: '0px',
+                                xs: '0px',
+                                md: 10,
                             },
                         }}
                     >
