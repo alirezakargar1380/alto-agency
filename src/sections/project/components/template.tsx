@@ -39,7 +39,7 @@ export default function Template({ project }: Props) {
                     xs: 'column',
                     md: 'row',
                 }}
-                gap={10}
+                gap={{xs:2,md:10}}
                 alignItems="center"
                 justifyContent={'space-between'}
                 sx={{
