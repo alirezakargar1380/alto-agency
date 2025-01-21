@@ -51,7 +51,7 @@ export default function ProjectItem({ item }: Props) {
                         </WhiteButton>
                     </m.div>
                 </Stack>
-                <Stack direction={'row'} justifyContent={'space-between'} alignItems={'normal'} mt={'8px'}>
+                <Stack direction={'row'} spacing={2} alignItems={'normal'} mt={'8px'}>
                     {item.lables?.map((label) => (
                         <Label key={label.name} color={label.color} fontFamily={'inter-light'}>{label.name}</Label>
                     ))}

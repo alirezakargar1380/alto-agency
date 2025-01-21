@@ -1,21 +1,8 @@
 'use client';
 
-import { Box, Typography } from "@mui/material";
-import Image from "src/components/image";
+import { Box } from "@mui/material";
 import { paths } from "src/routes/paths";
-import { ContentImage } from "../components/mui-custom";
-
-function Title({ children }: { children: React.ReactNode }) {
-    return <Typography fontFamily={'inter-bold'} fontSize={18}>{children}</Typography>
-}
-
-function Content({ children }: { children: React.ReactNode }) {
-    return <Box fontFamily={'inter-medium'} fontSize={18} whiteSpace={'break-spaces'} mt={'8px'} width={1}>{children}</Box>
-}
-
-function Card({ children }: { children: React.ReactNode }) {
-    return <Box mt={'8px'} mb={'28px'}>{children}</Box>
-}
+import { Card, Content, ContentImage, List, Title } from "../components/mui-custom";
 
 export default function WinnerBaziContent() {
     return (
@@ -39,36 +26,21 @@ export default function WinnerBaziContent() {
             <Card>
                 <Title>About Games:</Title>
                 <Content>
-                    every game has its own unique features and gameplay mechanics.
-                    <br />
-                    <br />
                     <b>Here are some of the most special features in the Winner Bazi project:</b>
-
-                    <br />
-                    {"      "}- Each game has its robot that can process the game coordinates and play with you.
-
-                    <br />
-                    {"      "}- You can connect with other players and play or chat with them.
-
-                    <br />
-                    {"      "}- Create private games and invite your friends to join you in epic battles.
-
-                    <br />
-                    {"      "}- Online Chat and Conversation
-
-                    <br />
-                    {"      "}- Weekly Tournaments
-
-                    <br />
-                    {"      "}- Coin Transfer and Gifting
-
-                    <br />
-                    {"      "}- Coin Purchases
-
-                    <br />
-                    <br />
+                    <List
+                        items={[
+                            'Each game has its robot that can process the game coordinates and play with you.',
+                            'You can connect with other players and play or chat with them.',
+                            'Create private games and invite your friends to join you in epic battles.',
+                            'Online Chat and Conversation',
+                            'Weekly Tournaments',
+                            'Coin Transfer and Gifting',
+                            'Coin Purchases'
+                        ]}
+                    />
                 </Content>
             </Card>
+            <br />
             <Card>
                 <Title>Play with Others:</Title>
                 <Content>

@@ -7,5 +7,5 @@ type Props = {
 
 export default function TemplateView({ project }: Props) {
 
-    return (<Template project={project} />);
+    return <Template project={project} />;
 }

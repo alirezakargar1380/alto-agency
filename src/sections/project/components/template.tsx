@@ -1,6 +1,6 @@
 'use client';
 
-import { Avatar, Box, Container, Stack, SvgIcon, Tooltip, Typography } from "@mui/material";
+import { Avatar, Box, Button, Container, Stack, SvgIcon, Tooltip, Typography } from "@mui/material";
 import Image from "src/components/image";
 import { IProjectItem } from "src/types/project";
 import AvatarGroup, { avatarGroupClasses } from '@mui/material/AvatarGroup';
@@ -18,6 +18,7 @@ import PhaserIcon from './../../../../public/assets/icons/projects/phaser-logo.s
 import TiltCard from "src/components/animation/tilt-card";
 import { _mock } from "src/_mock";
 import { paths } from "src/routes/paths";
+import SvgColor from "src/components/svg-color";
 
 export default function Template({ project }: Props) {
 
@@ -26,7 +27,7 @@ export default function Template({ project }: Props) {
         src,
         duration,
         content,
-        lables,
+        link,
         teams,
         tools,
     } = project;
@@ -38,12 +39,13 @@ export default function Template({ project }: Props) {
                     xs: 'column',
                     md: 'row',
                 }}
+                gap={10}
                 alignItems="center"
                 justifyContent={'space-between'}
                 sx={{
                     mt: {
                         xs: 10,
-                        md: '0px',
+                        // md: '0px',
                     },
                 }}
             >
@@ -56,7 +58,7 @@ export default function Template({ project }: Props) {
                     <Box
                         columnGap={{
                             xs: 14,
-                            md: 20,
+                            // md: 14,
                         }}
                         justifyContent={'space-between'}
                         rowGap={'48px'}
@@ -64,7 +66,6 @@ export default function Template({ project }: Props) {
                         gridTemplateColumns={{
                             xs: 'repeat(2, 1fr)',
                             // md: 'repeat(2, 1fr)',
-
                         }}
                         sx={{
                             my: {
@@ -75,18 +76,17 @@ export default function Template({ project }: Props) {
                     >
                         <Box>
                             <Typography fontSize={14} fontFamily={'inter-medium'}>Project’s name</Typography>
-                            <Typography mt={'16px'} fontSize={18} fontFamily={'inter-bold'}>{title}</Typography>
+                            <Typography mt={'16px'} fontSize={18} fontFamily={'inter-bold'} whiteSpace={'pre-wrap'}>{title}</Typography>
                         </Box>
-                        <Box>
+                        <Box width={'fit-content'}>
                             <Typography fontSize={14} fontFamily={'inter-medium'}>Duration</Typography>
                             <Typography mt={'16px'} fontSize={18} fontFamily={'inter-bold'}>{duration}</Typography>
                         </Box>
                         <Box>
                             <Typography fontSize={14} fontFamily={'inter-medium'}>Tools</Typography>
-
                             <Box
                                 mt={'16px'}
-                                width={1}
+                                width={'fit-content'}
                                 columnGap={2}
                                 justifyContent={'space-between'}
                                 rowGap={2}
@@ -99,14 +99,13 @@ export default function Template({ project }: Props) {
                                 {tools?.map((tool, index) => (
                                     <Tooltip title={tool.alt} key={index}>
                                         <Box>
-                                            {/* <SvgIcon component={tool.icon} color="inherit" /> */}
                                             <Image src={tool.icon} sx={{ width: tool.width }} />
                                         </Box>
                                     </Tooltip>
                                 ))}
                             </Box>
                         </Box>
-                        <Box>
+                        <Box width={'fit-content'}>
                             <Typography fontSize={14} fontFamily={'inter-medium'}>Teams</Typography>
                             <AvatarGroup
                                 sx={{
@@ -127,9 +126,18 @@ export default function Template({ project }: Props) {
                             </AvatarGroup>
                         </Box>
                     </Box>
+                    {(link) && (
+                        <Button variant="contained" href={link} target="_blank" sx={{ mt: 4, outline: '4px solid #939393B2', borderRadius: '12px', px: '40px', py: '12px', fontFamily: 'montserrat-thin' }}>
+                            View Live
+                            <SvgColor src="/assets/images/home/svg/arrow-right.svg" sx={{ ml: '8px' }} />
+                        </Button>
+                    )}
+
                 </Box>
             </Stack>
-            <Box mt={'75px'}>{content}</Box>
+            <Box mt={'75px'}>
+                {content}
+            </Box>
         </Container>
     );
 }

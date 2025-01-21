@@ -14,7 +14,7 @@ export type IProjectTools = {
 export type IProjectItem = {
     title: string
     src: string
-    // link: string
+    link?: string
     duration?: string
     content: React.ReactNode
     lables?: IProjectLabel[]

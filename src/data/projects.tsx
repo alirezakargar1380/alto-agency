@@ -3,6 +3,8 @@ import { IProjectItem, IProjectLabel } from "src/types/project";
 import WinnerBaziContent from "../sections/project/content/winner-bazi-content";
 import { paths } from "src/routes/paths";
 import svg from "./icons";
+import MyCampContent from "src/sections/project/content/my-camp-content";
+import DefitunesContent from "src/sections/project/content/defitunes-content";
 
 const ali = paths.project.avatarSrc('ali.png');
 const me = paths.project.avatarSrc('alireza.png');
@@ -16,6 +18,10 @@ const label: Record<string, IProjectLabel> = {
         name: 'UI/UX Design',
         color: 'warning'
     },
+    live: {
+        name: 'Live View',
+        color: 'info'
+    },
     fullStack: {
         name: 'Full Stack Development',
         color: 'warning'
@@ -25,8 +31,7 @@ const label: Record<string, IProjectLabel> = {
 export const projects: IProjectItem[] = [
     {
         title: 'Winner Bazi',
-        src: '/assets/images/projects/winnerBazi.jpg',
-        // link: 'winner-bazi',
+        src: paths.project.imgSrc('winnerBazi.jpg'),
         duration: '2022 - 2023',
         lables: [label.backend],
         tools: [svg.ts, svg.phaser, svg.socket, svg.express, svg.nodeJs],
@@ -34,25 +39,39 @@ export const projects: IProjectItem[] = [
         content: <WinnerBaziContent />
     },
     {
-        title: 'Belcom Advertising Agency',
-        src: '/assets/images/Frame 16140.png',
-        duration: '2022 - 2023',
-        lables: [label.ui_ux],
+        title: 'Karano',
+        src: paths.project.imgSrc('29_3x_shots_so.png'),
+        duration: '2024 - 2025',
+        lables: [label.fullStack, label.ui_ux, label.live],
+        tools: [svg.ts, svg.nodeJs, svg.nestJs, svg.react, svg.figma, svg.mui],
+        teams: [me],
         content: <WinnerBaziContent />
     },
+    // {
+    //     title: 'Belcom Advertising Agency',
+    //     src: '/assets/images/Frame 16140.png',
+    //     duration: '2022 - 2023',
+    //     lables: [label.ui_ux],
+    //     content: <WinnerBaziContent />
+    // },
     {
-        title: 'MyCamp',
+        title: 'My Camp',
         src: paths.project.imgSrc('mycamp.png'),
         duration: '2022/july - 2023/november',
         lables: [label.backend],
-        content: <WinnerBaziContent />
+        tools: [svg.ts, svg.express, svg.socket],
+        teams: [me],
+        content: <MyCampContent />
     },
     {
         title: 'Defitunes (Stream Music & Shop)',
-        src: paths.project.imgSrc('720shots_so.png'),
-        duration: '2022 - 2023',
-        lables: [label.fullStack],
-        content: <WinnerBaziContent />
+        src: paths.project.imgSrc('161_1x_shots_so.png'),
+        duration: '3 Months',
+        link: 'https://defitunes.com/',
+        lables: [label.fullStack, label.live],
+        tools: [svg.ts, svg.nodeJs, svg.nestJs, svg.react, svg.figma],
+        teams: [me],
+        content: <DefitunesContent />
     },
     // {
     //     title: 'Smart Way To plan Work',
