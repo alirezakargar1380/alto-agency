@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import Iconify from "src/components/iconify";
 import Image from "src/components/image";
 
@@ -24,12 +24,15 @@ export function Card({ children }: { children: React.ReactNode }) {
 
 export function List({ items }: { items: string[] }) {
     return (
-        <Box>
+        <Stack spacing={1} mt={3}>
             {items.map((item, index) => (
-                <Box key={index} display={'flex'} alignItems={'center'} sx={{ pl: 4 }} fontFamily={'inter-medium'} fontSize={16}>
-                    <Iconify icon={'mdi:approve'} color={'blue'} sx={{ pt: 0, mr: 0.5 }} /> {item}
+                <Box key={index} display={'flex'} alignItems={'start'} sx={{ pl: 4 }} fontFamily={'inter-medium'} fontSize={16}>
+                    <Box>
+                        <Iconify icon={'mdi:approve'} color={'blue'} sx={{ mt: 0.5, mr: 0.5, width: '20px', height: '20px' }} />
+                    </Box>
+                    <Box>{item}</Box>
                 </Box>
             ))}
-        </Box>
+        </Stack>
     )
 }
