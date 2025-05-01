@@ -14,6 +14,7 @@ import MainLayout from "src/layouts/main";
 import Image from "src/components/image";
 import SvgColor from "src/components/svg-color";
 import HomeProjects from "../home-projects";
+import HomeTeam from "./home-team";
 
 export default function HomeView() {
 
@@ -381,6 +382,7 @@ export default function HomeView() {
                                         </Stack>
                                     </Box>
                                     <HomeProjects />
+                                    <HomeTeam />
                                 </Box>
                             </Container>
                         </Box>
