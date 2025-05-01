@@ -2,6 +2,14 @@ import { useState, useCallback } from 'react';
 
 // ----------------------------------------------------------------------
 
+export interface useBooleanReturnType {
+  value: boolean;
+  onTrue: () => void;
+  onFalse: () => void;
+  onToggle: () => void;
+  setValue: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 interface ReturnType {
   value: boolean;
   onTrue: () => void;

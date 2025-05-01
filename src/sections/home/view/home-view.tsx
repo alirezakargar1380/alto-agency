@@ -29,6 +29,10 @@ export default function HomeView() {
                 outerScale={5}
                 outerStyle={{
                     boxShadow: 'rgba(0, 0, 0, 0.15) 0px 0px 20px',
+                    zIndex: 10000
+                }}
+                innerStyle={{
+                    zIndex: 10000
                 }}
             >
                 <img src={"./cursor.png"} />
