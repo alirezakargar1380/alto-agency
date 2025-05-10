@@ -6,6 +6,7 @@ import svg from "./icons";
 import MyCampContent from "src/sections/project/content/my-camp-content";
 import DefitunesContent from "src/sections/project/content/defitunes-content";
 import KaranoContent from "src/sections/project/content/karano-content";
+import MegaCalculatorContent from "src/sections/project/content/mega-calculator-content";
 
 const ali = paths.project.avatarSrc('ali.png');
 const me = paths.project.avatarSrc('alireza.png');
@@ -74,6 +75,16 @@ export const projects: IProjectItem[] = [
         tools: [svg.ts, svg.nodeJs, svg.nestJs, svg.react, svg.figma],
         teams: [me],
         content: <DefitunesContent />
+    },
+    {
+        title: 'Mega Calculator',
+        src: paths.project.imgSrc('984shots_so.png'),
+        duration: '1 Week',
+        link: 'https://calculator.tech-world.ir/',
+        lables: [label.fullStack, label.live],
+        tools: [svg.ts, svg.next],
+        teams: [me],
+        content: <MegaCalculatorContent />
     },
     // {
     //     title: 'Smart Way To plan Work',
