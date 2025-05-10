@@ -6,6 +6,52 @@ import Iconify from "src/components/iconify";
 import Image from "src/components/image";
 import { useBoolean } from "src/hooks/use-boolean";
 
+interface ILink {
+    github?: string,
+    instagram?: string,
+    linkedin?: string,
+    youtube?: string,
+    twitter?: string,
+    telegram?: string,
+}
+
+interface ITeam {
+    name: string;
+    role: string;
+    src: string;
+    description: string;
+    links: ILink;
+}
+
+const teams: ITeam[] = [
+    {
+        name: "Alireza Kargar",
+        role: "Full Stack Web Developer",
+        src: "/assets/images/team/ak.jpg",
+        description: "i'm alireza kargar with over 10 years of experience in web development. \n i'm a full stack web developer with a focus on building responsive and user-friendly websites. i have experience in a variety of programming languages and frameworks, including html, css, javascript, react, and node.js. i'm also familiar with a variety of web development tools and technologies, including git, github, and webpack. i'm a quick learner and i'm always looking for new challenges. i'm a team player and i'm always willing to help others. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills.",
+        links: {
+            github: "",
+            instagram: "",
+            linkedin: "",
+            youtube: "",
+            twitter: "",
+        }
+    },
+    {
+        name: "Ali Mousavi",
+        role: "Product Designer",
+        src: "/assets/images/team/ali_mousavi.jpg",
+        description: "🚀 Passionate about crafting intuitive and engaging user experiences, I am a Senior Product Designer with over [X] years in the industry. My expertise lies at the intersection of design, technology, and user-centered problem solving. \n \n Core Skills: \n - User Research: Conducting thorough user research to understand needs and pain points. \n - UX/UI Design: Creating wireframes, prototypes, and high-fidelity mockups that communicate design concepts effectively. \n - Collaboration: Working closely with cross-functional teams including developers, product managers, and stakeholders to deliver cohesive products. \n - Design Systems: Developing and maintaining scalable design systems for consistent and harmonious user experiences. \n I thrive in dynamic environments, leveraging design thinking to drive innovation and enhance usability. My portfolio showcases successful projects that blend aesthetics with functionality, ensuring that every user interaction is delightful. \n Let’s connect to explore how I can bring value to your team and contribute to creating exceptional products!",
+        links: {
+            github: "",
+            instagram: "",
+            linkedin: "",
+            youtube: "",
+            twitter: "",
+        }
+    }
+]
+
 export default function HomeTeam() {
     return (
         <Box py={8} width={'fit-content'} mx={'auto'}>
@@ -13,14 +59,15 @@ export default function HomeTeam() {
                 <Typography fontSize={30} width={1} fontFamily={'inter-medium'} textAlign={'center'} mb={'56px'}>Team</Typography>
             </m.div>
             <Stack direction={'row'} spacing={4}>
-                <Item name="Alireza Kargar" role="Full Stack Web Developer" src="/assets/images/team/ak.jpg" />
-                <Item name="Ali Mousavi" role="Product Designer" src="/assets/images/team/ak.jpg" />
+                {teams.map((item) => (
+                    <Item name={item.name} role={item.role} des={item.description} src={item.src} links={item.links} />
+                ))}
             </Stack>
         </Box>
     )
 }
 
-function Item({ src, name, role }: { src: string, name: string, role: string }) {
+function Item({ src, name, role, des, links }: { src: string, name: string, des: string, role: string, links: ILink }) {
     const dialog = useBoolean();
     return (
         <>
@@ -30,14 +77,14 @@ function Item({ src, name, role }: { src: string, name: string, role: string }) 
                     <Box width={'fit-content'}>
                         <Typography fontSize={32} fontFamily={'inter-bold'} textAlign={'left'} pl={0}>{name}</Typography>
                         <Typography fontSize={12} fontFamily={'inter-medium'} whiteSpace={'break-spaces'}>
-                            {"i'm alireza kargar with over 10 years of experience in web development. \n i'm a full stack web developer with a focus on building responsive and user-friendly websites. i have experience in a variety of programming languages and frameworks, including html, css, javascript, react, and node.js. i'm also familiar with a variety of web development tools and technologies, including git, github, and webpack. i'm a quick learner and i'm always looking for new challenges. i'm a team player and i'm always willing to help others. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a"}
+                            {des}
                         </Typography>
                     </Box>
                 </Box>
                 <Box>
                     <Typography fontSize={32} fontFamily={'inter-bold'} textAlign={'left'} pl={0} mt={4}>My Social Media</Typography>
                     <Stack spacing={3} direction={'row'} mt={2}>
-                    <Link href="https://github.com/alirezakargar1380" target="_blank" rel="noopener">
+                        <Link href="https://github.com/alirezakargar1380" target="_blank" rel="noopener">
                             <Iconify icon={'mdi:github'} width={32} sx={{ color: '#000' }} />
                         </Link>
                         <Link href="https://www.youtube.com/@develop_it" target="_blank" rel="noopener">
