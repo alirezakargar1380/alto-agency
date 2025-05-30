@@ -80,10 +80,12 @@ export default function Footer() {
             <Box width={120}>
               <Stack direction={'row'}>
                 <Box
+                  alt='logo'
                   component="img"
                   src="/logo/union.svg"
                   sx={{
-                    width: 1
+                    width: '120px',
+                    height: '136px',
                   }}
                 />
                 <Typography fontSize={80} ml={3} pt={2} fontFamily={'inter-bold'}>Alto</Typography>

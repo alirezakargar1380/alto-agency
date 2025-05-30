@@ -89,7 +89,8 @@ export default function HomeView() {
                                     xs: 25,
                                     md: 35
                                 }} textAlign={'center'} justifyContent={'center'}>
-                                    <TextAnimate
+                                    <Typography variant="h2" fontFamily={'inter-medium'}>We create digital magic</Typography>
+                                    {/* <TextAnimate
                                         text="We create digital magic"
                                         variants={varFade().inUp}
                                         px={0.5}
@@ -100,7 +101,7 @@ export default function HomeView() {
                                                 md: '60px!important'
                                             }
                                         }}
-                                    />
+                                    /> */}
                                     <TextAnimate text="Beauty, creativity, and innovation unleashed."
                                         split=" "
                                         px={0.25}

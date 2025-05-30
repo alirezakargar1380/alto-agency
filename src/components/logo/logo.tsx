@@ -26,6 +26,7 @@ const Logo = forwardRef<HTMLDivElement, LogoProps>(
     // -------------------------------------------------------
     const logo = (
       <Box
+        alt='alto logo'
         component="img"
         src="/logo/logo.svg"
         sx={{ width: 88, height: 28, cursor: 'pointer', ...sx }}
