@@ -62,8 +62,8 @@ export default function HomeTeam() {
                 md: 'row',
                 xs: 'column'
             }} spacing={4}>
-                {teams.map((item) => (
-                    <Item name={item.name} role={item.role} des={item.description} src={item.src} links={item.links} />
+                {teams.map((item, index: number) => (
+                    <Item key={index} name={item.name} role={item.role} des={item.description} src={item.src} links={item.links} />
                 ))}
             </Stack>
         </Box>
