@@ -68,7 +68,7 @@ export const projects: IProjectItem[] = [
     },
     {
         title: 'Defitunes (Stream Music & Shop)',
-        src: paths.project.imgSrc('161_1x_shots_so.png'),
+        src: paths.project.imgSrc('161_1x_shots_so@0.5x.png'),
         duration: '3 Months',
         link: 'https://defitunes.com/',
         lables: [label.fullStack, label.live],
