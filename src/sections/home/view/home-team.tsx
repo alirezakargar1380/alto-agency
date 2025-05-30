@@ -58,7 +58,10 @@ export default function HomeTeam() {
             <m.div>
                 <Typography fontSize={30} width={1} fontFamily={'inter-medium'} textAlign={'center'} mb={'56px'}>Team</Typography>
             </m.div>
-            <Stack direction={'row'} spacing={4}>
+            <Stack direction={{
+                md: 'row',
+                xs: 'column'
+            }} spacing={4}>
                 {teams.map((item) => (
                     <Item name={item.name} role={item.role} des={item.description} src={item.src} links={item.links} />
                 ))}

@@ -47,7 +47,7 @@ export default function HomeView() {
             }}>
                 <MainLayout>
                     <Box sx={{
-                        backgroundImage: "url('./bggb-small.png')",
+                        backgroundImage: "url('./bggb-small-copy@0.5x.png')",
                         backgroundSize: '100% 101%',
                         backgroundPositionX: 'center',
                         backgroundPositionY: 'center',
