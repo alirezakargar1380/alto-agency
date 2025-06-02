@@ -1,4 +1,4 @@
-import { Box, Card, Dialog, Link, Stack, Typography } from "@mui/material";
+import { Box, Card, CardContent, Dialog, Link, Stack, Typography } from "@mui/material";
 import { m } from 'framer-motion';
 import { WhiteButton } from "src/components/button/white-button";
 import { DialogWithButton } from "src/components/custom-dialog";
@@ -121,7 +121,10 @@ function Item({ src, name, role, des, links }: { src: string, name: string, des:
                     // border: '2px solid blue'
                 }}
             >
-                <Image src={src} sx={{ borderRadius: 2 }} />
+                <CardContent sx={{ p: 0 }}>
+                    <Image src={src} sx={{ borderRadius: 2 }} />
+                </CardContent>
+
                 <Box pt={1} pb={1}>
                     {/* <Typography color={"#0440DD"} fontSize={24} fontFamily={'inter-bold'} fontWeight={'bold'}pt={0.5}>{'>_'}</Typography> */}
                     <Typography fontSize={32} fontFamily={'inter-bold'} textAlign={'left'} pl={0}>{name}</Typography>
