@@ -18,7 +18,7 @@ export const metadata = {
   title: 'Alto Agency > Design and Develop Web Applications',
   description:
     'Alto Agency designs and develops exceptional websites and applications that captivate users and drive business growth. From concept to launch, we create digital experiences that make your brand shine. \n JavaScript ^ TypeScript ^ React ^ Next.js ^ Material UI ^ Tailwind CSS ^ Emotion ^ NextAuth ^ Web ^ PWA ^ Design',
-  keywords: 'react,material,kit,application,dashboard,admin,template,website,webapp,alireza kargar,next.js,js,typescript,tailwindcss,emotion,nextauth,alto,agency,web,pwa,design,project,وبسایت, سایت, پلتفرم',
+  keywords: 'react,material,kit,application,dashboard,admin,template,website,webapp,alireza kargar,ali mousavi,next.js,js,typescript,tailwindcss,emotion,nextauth,alto,agency,web,pwa,design,project,وبسایت, سایت, پلتفرم',
   themeColor: '#000000',
   manifest: '/manifest.json',
   viewport: { width: 'device-width', initialScale: 1, maximumScale: 1 },
