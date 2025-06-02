@@ -1,10 +1,11 @@
-import { Box, Card, CardContent, Dialog, Link, Stack, Typography } from "@mui/material";
+import { Box, Card, CardContent, Dialog, Link, Stack, Typography, Avatar } from "@mui/material";
 import { m } from 'framer-motion';
 import { WhiteButton } from "src/components/button/white-button";
 import { DialogWithButton } from "src/components/custom-dialog";
 import Iconify from "src/components/iconify";
 import Image from "src/components/image";
 import { useBoolean } from "src/hooks/use-boolean";
+import { useState } from "react";
 
 interface ILink {
     github?: string,
@@ -41,7 +42,7 @@ const teams: ITeam[] = [
         name: "Ali Mousavi",
         role: "Product Designer",
         src: "/assets/images/team/ali_mousavi.jpg",
-        description: "🚀 Passionate about crafting intuitive and engaging user experiences, I am a Senior Product Designer with over [X] years in the industry. My expertise lies at the intersection of design, technology, and user-centered problem solving. \n \n Core Skills: \n - User Research: Conducting thorough user research to understand needs and pain points. \n - UX/UI Design: Creating wireframes, prototypes, and high-fidelity mockups that communicate design concepts effectively. \n - Collaboration: Working closely with cross-functional teams including developers, product managers, and stakeholders to deliver cohesive products. \n - Design Systems: Developing and maintaining scalable design systems for consistent and harmonious user experiences. \n I thrive in dynamic environments, leveraging design thinking to drive innovation and enhance usability. My portfolio showcases successful projects that blend aesthetics with functionality, ensuring that every user interaction is delightful. \n Let’s connect to explore how I can bring value to your team and contribute to creating exceptional products!",
+        description: "🚀 Passionate about crafting intuitive and engaging user experiences, I am a Senior Product Designer with over [X] years in the industry. My expertise lies at the intersection of design, technology, and user-centered problem solving. \n \n Core Skills: \n - User Research: Conducting thorough user research to understand needs and pain points. \n - UX/UI Design: Creating wireframes, prototypes, and high-fidelity mockups that communicate design concepts effectively. \n - Collaboration: Working closely with cross-functional teams including developers, product managers, and stakeholders to deliver cohesive products. \n - Design Systems: Developing and maintaining scalable design systems for consistent and harmonious user experiences. \n I thrive in dynamic environments, leveraging design thinking to drive innovation and enhance usability. My portfolio showcases successful projects that blend aesthetics with functionality, ensuring that every user interaction is delightful. \n Let's connect to explore how I can bring value to your team and contribute to creating exceptional products!",
         links: {
             github: "",
             instagram: "",
@@ -63,15 +64,52 @@ export default function HomeTeam() {
                 xs: 'column'
             }} spacing={4}>
                 {teams.map((item, index: number) => (
-                    <Item key={index} name={item.name} role={item.role} des={item.description} src={item.src} links={item.links} />
+                    <Item key={index} name={item.name} role={item.role} des={item.description} src={item.src} />
                 ))}
             </Stack>
         </Box>
     )
 }
 
-function Item({ src, name, role, des, links }: { src: string, name: string, des: string, role: string, links: ILink }) {
+function ImageWithFallback({ src, name, sx }: { src: string, name: string, sx: any }) {
+    const [imageError, setImageError] = useState(false);
+
+    if (imageError) {
+        return (
+            <Avatar
+                sx={{
+                    ...sx,
+                    fontSize: '2rem',
+                    bgcolor: 'primary.main',
+                    color: 'white'
+                }}
+            >
+                {name.split(' ').map(n => n[0]).join('').toUpperCase()}
+            </Avatar>
+        );
+    }
+
+    return (
+        <Box sx={sx}>
+            <img
+                src={src}
+                alt={`${name} profile`}
+                style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: 'inherit'
+                }}
+                onError={() => setImageError(true)}
+                onLoad={() => setImageError(false)}
+            />
+        </Box>
+    );
+}
+
+function Item({ src, name, role, des }: { src: string, name: string, des: string, role: string }) {
     const dialog = useBoolean();
+
     return (
         <Box>
             <DialogWithButton dialog={dialog} fullWith>
@@ -79,7 +117,11 @@ function Item({ src, name, role, des, links }: { src: string, name: string, des:
                     md: 'row',
                     xs: 'column'
                 }} gap={2}>
-                    <Image src={src} sx={{ borderRadius: 2, maxWidth: 320 }} />
+                    <ImageWithFallback 
+                        src={src} 
+                        name={name}
+                        sx={{ borderRadius: 2, maxWidth: 320, minHeight: 320 }}
+                    />
                     <Box width={'fit-content'}>
                         <Typography fontSize={32} fontFamily={'inter-bold'} textAlign={'left'} pl={0}>{name}</Typography>
                         <Typography fontSize={12} fontFamily={'inter-medium'} whiteSpace={'break-spaces'}>
@@ -118,23 +160,23 @@ function Item({ src, name, role, des, links }: { src: string, name: string, des:
                     backdropFilter: 'blur(5px);',
                     borderRadius: 2,
                     p: 1
-                    // border: '2px solid blue'
                 }}
             >
-                <CardContent sx={{ p: 0 }}>
-                    <Image src={src} sx={{ borderRadius: 2 }} />
-                </CardContent>
-
-                <Box pt={1} pb={1}>
-                    {/* <Typography color={"#0440DD"} fontSize={24} fontFamily={'inter-bold'} fontWeight={'bold'}pt={0.5}>{'>_'}</Typography> */}
-                    <Typography fontSize={32} fontFamily={'inter-bold'} textAlign={'left'} pl={0}>{name}</Typography>
-                    <Typography fontSize={12} fontFamily={'inter-medium'} >{role}</Typography>
-                    <WhiteButton sx={{ whiteSpace: 'nowrap', mt: 2 }} onClick={dialog.onTrue}>
-                        read more
-                    </WhiteButton>
+                <Box sx={{ p: 0 }}>
+                    <ImageWithFallback 
+                        src={src} 
+                        name={name}
+                        sx={{ borderRadius: 2, width: 1, minHeight: 300 }}
+                    />
+                    <Box pt={1} pb={1}>
+                        <Typography fontSize={32} fontFamily={'inter-bold'} textAlign={'left'} pl={0}>{name}</Typography>
+                        <Typography fontSize={12} fontFamily={'inter-medium'} >{role}</Typography>
+                        <WhiteButton sx={{ whiteSpace: 'nowrap', mt: 2 }} onClick={dialog.onTrue}>
+                            read more
+                        </WhiteButton>
+                    </Box>
                 </Box>
             </Card>
         </Box>
-
     )
 }
