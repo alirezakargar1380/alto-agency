@@ -93,7 +93,7 @@ function ImageWithFallback({ src, name, sx }: { src: string, name: string, sx: a
         <Box sx={sx}>
             <img
                 src={src}
-                alt={`${name} profile`}
+                alt={`${name} profile web developer`}
                 style={{
                     width: '100%',
                     height: '100%',
