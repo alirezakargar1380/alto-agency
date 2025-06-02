@@ -73,17 +73,20 @@ export default function HomeTeam() {
 function Item({ src, name, role, des, links }: { src: string, name: string, des: string, role: string, links: ILink }) {
     const dialog = useBoolean();
     return (
-        <>
+        <Box>
             <DialogWithButton dialog={dialog} fullWith>
-                <Box display={'flex'} gap={2}>
-                    <Image src={src} sx={{ borderRadius: 2, width: 320 }} />
+                <Stack direction={{
+                    md: 'row',
+                    xs: 'column'
+                }} gap={2}>
+                    <Image src={src} sx={{ borderRadius: 2, maxWidth: 320 }} />
                     <Box width={'fit-content'}>
                         <Typography fontSize={32} fontFamily={'inter-bold'} textAlign={'left'} pl={0}>{name}</Typography>
                         <Typography fontSize={12} fontFamily={'inter-medium'} whiteSpace={'break-spaces'}>
                             {des}
                         </Typography>
                     </Box>
-                </Box>
+                </Stack>
                 <Box>
                     <Typography fontSize={32} fontFamily={'inter-bold'} textAlign={'left'} pl={0} mt={4}>My Social Media</Typography>
                     <Stack spacing={3} direction={'row'} mt={2}>
@@ -111,7 +114,7 @@ function Item({ src, name, role, des, links }: { src: string, name: string, des:
             </DialogWithButton>
             <Card
                 sx={{
-                    width: 400,
+                    maxWidth: 400,
                     backdropFilter: 'blur(5px);',
                     borderRadius: 2,
                     p: 1
@@ -128,7 +131,7 @@ function Item({ src, name, role, des, links }: { src: string, name: string, des:
                     </WhiteButton>
                 </Box>
             </Card>
-        </>
+        </Box>
 
     )
 }

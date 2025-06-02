@@ -169,7 +169,6 @@ export default function HomeView() {
                             background: "radial-gradient(circle at center, transparent, #F5F5FC, #F5F5FC, #F5F5FC)",
                             width: 1,
                             textAlign: 'center',
-                            pb: 16
                         }}>
                             <Box sx={{
                                 background: 'linear-gradient(#F5F5FC, #F5F5FC, transparent)'
