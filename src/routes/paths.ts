@@ -9,6 +9,7 @@ const ROOTS = {
 
 export const paths = {
   minimalUI: 'https://mui.com/store/items/minimal-dashboard/',
+  telegram: 'https://t.me/alireza_kargar_dev',
   // AUTH
   auth: {
     jwt: {

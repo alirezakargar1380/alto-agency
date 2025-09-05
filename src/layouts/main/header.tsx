@@ -87,7 +87,7 @@ export default function Header() {
           {mdUp && <NavDesktop data={navConfig} />}
 
           <Stack alignItems="center" direction={{ xs: 'row', md: 'row-reverse' }}>
-            <Button variant="contained" target="_blank" sx={{ fontFamily: 'montserrat-light', px: 2 }} rel="noopener" href={paths.minimalUI}>
+            <Button variant="contained" target="_blank" sx={{ fontFamily: 'montserrat-light', px: 2 }} rel="noopener" href={paths.telegram}>
               Let's talk
             </Button>
 
