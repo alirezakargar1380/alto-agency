@@ -15,6 +15,7 @@ import Image from "src/components/image";
 import SvgColor from "src/components/svg-color";
 import HomeProjects from "../home-projects";
 import HomeTeam from "./home-team";
+import { paths } from "src/routes/paths";
 
 export default function HomeView() {
 
@@ -118,8 +119,12 @@ export default function HomeView() {
                                         }}
                                     />
                                     <br />
-                                    <Button variant="contained" sx={{ mt: 4, outline: '4px solid #939393B2', borderRadius: '12px', px: '24px', py: '12px', fontFamily: 'montserrat-thin' }}>
+                                    {/* <Button variant="contained" sx={{ mt: 4, outline: '4px solid #939393B2', borderRadius: '12px', px: '24px', py: '12px', fontFamily: 'montserrat-thin' }}>
                                         Book a Free 30min call
+                                        <SvgColor src="/assets/images/home/svg/arrow-right.svg" sx={{ ml: '8px' }} />
+                                    </Button> */}
+                                    <Button variant="contained" target="_blank" rel="noopener" href={paths.telegram} sx={{ mt: 4, outline: '4px solid #939393B2', borderRadius: '12px', px: '24px', py: '12px', fontFamily: 'montserrat-thin' }}>
+                                        Let's Talk About your project
                                         <SvgColor src="/assets/images/home/svg/arrow-right.svg" sx={{ ml: '8px' }} />
                                     </Button>
                                 </Box>
