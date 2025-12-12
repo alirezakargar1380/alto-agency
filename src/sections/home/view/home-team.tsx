@@ -28,7 +28,7 @@ const teams: ITeam[] = [
     {
         name: "Alireza Kargar",
         role: "Full Stack Web Developer",
-        src: "/assets/images/team/ak.jpg",
+        src: "/assets/images/team/ME_2.gif",
         description: "i'm alireza kargar with over 10 years of experience in web development. \n i'm a full stack web developer with a focus on building responsive and user-friendly websites. i have experience in a variety of programming languages and frameworks, including html, css, javascript, react, and node.js. i'm also familiar with a variety of web development tools and technologies, including git, github, and webpack. i'm a quick learner and i'm always looking for new challenges. i'm a team player and i'm always willing to help others. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills.",
         links: {
             github: "",
@@ -64,7 +64,13 @@ export default function HomeTeam() {
                 xs: 'column'
             }} spacing={4}>
                 {teams.map((item, index: number) => (
-                    <Item key={index} name={item.name} role={item.role} des={item.description} src={item.src} />
+                    <Item
+                        key={index}
+                        name={item.name}
+                        role={item.role}
+                        des={item.description}
+                        src={item.src}
+                    />
                 ))}
             </Stack>
         </Box>
@@ -117,8 +123,8 @@ function Item({ src, name, role, des }: { src: string, name: string, des: string
                     md: 'row',
                     xs: 'column'
                 }} gap={2}>
-                    <ImageWithFallback 
-                        src={src} 
+                    <ImageWithFallback
+                        src={src}
                         name={name}
                         sx={{ borderRadius: 2, maxWidth: 320, minHeight: 320 }}
                     />
@@ -163,10 +169,10 @@ function Item({ src, name, role, des }: { src: string, name: string, des: string
                 }}
             >
                 <Box sx={{ p: 0 }}>
-                    <ImageWithFallback 
-                        src={src} 
+                    <ImageWithFallback
+                        src={src}
                         name={name}
-                        sx={{ borderRadius: 2, width: 1, minHeight: 300 }}
+                        sx={{ borderRadius: 2, width: 300, height: 350 }}
                     />
                     <Box pt={1} pb={1}>
                         <Typography fontSize={32} fontFamily={'inter-bold'} textAlign={'left'} pl={0}>{name}</Typography>
