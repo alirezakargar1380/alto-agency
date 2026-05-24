@@ -33,7 +33,7 @@ const label: Record<string, IProjectLabel> = {
 export const projects: IProjectItem[] = [
     {
         title: 'Karano',
-        src: paths.project.imgSrc('29_1x_shots_so.png'),
+        src: paths.project.imgSrc('karano.jpg'),
         duration: '2024 - 2025',
         link: 'https://karano.online/',
         lables: [label.fullStack, label.ui_ux, label.live],
