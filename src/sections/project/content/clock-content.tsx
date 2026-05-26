@@ -18,7 +18,10 @@ export default function ClockContent() {
                 </Content>
             </Card>
             <Card>
-                <Title>Customize</Title>
+                <br/>
+                <br/>
+                <br/>
+                <Title>Able To Choose Color & Metal Material you want to build your clock with:</Title>
                 <Content>
                     <ContentImage src={paths.project.imgSrc('Screenshot 2026-05-26 091024.png')} />
                     There is different customize option that you can apply based on the clock model that you choose (in previous image).
