@@ -16,6 +16,7 @@ import SvgColor from "src/components/svg-color";
 import HomeProjects from "../home-projects";
 import HomeTeam from "./home-team";
 import { paths } from "src/routes/paths";
+import LinearImageSlider from "src/sections/carousel-view/linear-slider";
 
 export default function HomeView() {
 
@@ -150,7 +151,17 @@ export default function HomeView() {
                                 // pb: 10,
                                 background: 'linear-gradient(transparent, #82a5ff82, transparent)',
                             }}>
-                                <CarouselCenterMode
+                                <LinearImageSlider
+                                    images={[
+                                        "/assets/images/Frame 15514.jpg",
+                                        "/assets/images/Frame 142.jpg",
+                                        "/assets/images/Frame 27.jpg",
+                                        "/assets/images/Frame 16140.png",
+                                        "/assets/images/Frame 29.png",
+                                    ]}
+                                    speed={100}
+                                />
+                                {/* <CarouselCenterMode
                                     data={[
                                         "/assets/images/Frame 15514.jpg",
                                         "/assets/images/Frame 142.jpg",
@@ -166,11 +177,12 @@ export default function HomeView() {
                                             width: 100 * (index + 1)
                                         }
                                     })}
-                                />
+                                /> */}
                             </Box>
                         </Box>
 
                         <Box sx={{
+                            pt: 16,
                             background: "radial-gradient(circle at center, transparent, #F5F5FC, #F5F5FC, #F5F5FC)",
                             width: 1,
                             textAlign: 'center',

@@ -26,6 +26,19 @@ interface ITeam {
 
 const teams: ITeam[] = [
     {
+        name: "Sajjad Isvand",
+        role: "Software Developer",
+        src: "/assets/images/team/ChatGPT Image May 26, 2026, 08_08_35 AM.png",
+        description: "i'm alireza kargar with over 10 years of experience in web development. \n i'm a full stack web developer with a focus on building responsive and user-friendly websites. i have experience in a variety of programming languages and frameworks, including html, css, javascript, react, and node.js. i'm also familiar with a variety of web development tools and technologies, including git, github, and webpack. i'm a quick learner and i'm always looking for new challenges. i'm a team player and i'm always willing to help others. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills. i'm a creative thinker and i'm always looking for new ways to improve my skills. i'm a problem solver and i'm always looking for new ways to improve my skills.",
+        links: {
+            github: "",
+            instagram: "",
+            linkedin: "",
+            youtube: "",
+            twitter: "",
+        }
+    },
+    {
         name: "Alireza Kargar",
         role: "Full Stack Web Developer",
         src: "/assets/images/team/ME_2_2.gif",
