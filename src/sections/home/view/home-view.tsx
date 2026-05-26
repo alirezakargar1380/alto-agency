@@ -48,7 +48,9 @@ export default function HomeView() {
                 width: '100%',
             }}>
                 <MainLayout>
-                    <Box sx={{
+                    <Box 
+                    id={"home"}
+                    sx={{
                         backgroundImage: "url('./bggb-small-copy@0.5x.png')",
                         backgroundSize: '100% 101%',
                         backgroundPositionX: 'center',
@@ -245,7 +247,7 @@ export default function HomeView() {
                             </Container>
                         </Box>
                         <Box bgcolor={'#F5F5FC'}>
-                            <Container component={MotionContainer}>
+                            <Container component={MotionContainer} maxWidth={'xl'}>
                                 <Box py={20}>
                                     <Box width={'fit-content'} mx={'auto'}>
                                         <Stack direction={{

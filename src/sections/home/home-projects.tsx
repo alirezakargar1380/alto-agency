@@ -6,7 +6,7 @@ import { projects } from "src/data/projects";
 
 export default function HomeProjects() {
     return (
-        <Box py={25} width={'fit-content'} mx={'auto'}>
+        <Box py={25} width={'fit-content'} mx={'auto'} id={"projects"}>
             <m.div
             // variants={varSlide({
             //     durationIn: 4,
@@ -22,7 +22,7 @@ export default function HomeProjects() {
                 gridTemplateColumns={{
                     xs: 'repeat(1, 1fr)',
                     sm: 'repeat(2, 1fr)',
-                    md: 'repeat(2, 1fr)',
+                    md: 'repeat(3, 1fr)',
                 }}
             >
                 {projects.map((item, index) => (

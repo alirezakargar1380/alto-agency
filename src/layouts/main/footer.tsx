@@ -91,15 +91,23 @@ export default function Footer() {
                 <Typography fontSize={80} ml={3} pt={2} fontFamily={'inter-bold'}>Alto</Typography>
               </Stack>
               <Stack direction={'row'} justifyContent={'space-between'} mt={2}>
-                <SvgColor src='/assets/icons/footer/instagram.svg' />
-                <SvgColor src='/assets/icons/footer/linkedin.svg' />
-                <SvgColor src='/assets/icons/footer/x.svg' />
+                <Link href={'https://instagram.com/alireza_kargar_dev'} target={'_blank'} color="inherit" underline="none">
+                  <SvgColor src='/assets/icons/footer/instagram.svg' />
+                </Link>
+                <Link href={'https://x.com/develop__it'} target={'_blank'} color="inherit" underline="none">
+                  <SvgColor src='/assets/icons/footer/x.svg' />
+                </Link>
+                <Link href={'https://www.linkedin.com/in/alirezakargarr/'} target={'_blank'} color="inherit" underline="none">
+                  <SvgColor src='/assets/icons/footer/linkedin.svg' />
+                </Link>
               </Stack>
             </Box>
 
             <Box>
               <Stack spacing={6}>
-                <Typography fontFamily={'montserrat-light'}>About</Typography>
+                <Link href={'/#about'} color="inherit" underline="none">
+                  <Typography fontFamily={'montserrat-light'}>About</Typography>
+                </Link>
                 <Typography fontFamily={'montserrat-light'}>Approach</Typography>
                 <Typography fontFamily={'montserrat-light'}>Projects</Typography>
                 <Typography fontFamily={'montserrat-light'}>Services</Typography>

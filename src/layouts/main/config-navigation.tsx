@@ -10,19 +10,21 @@ export const navConfig = [
   {
     title: 'Approach',
     icon: <Iconify icon="solar:home-2-bold-duotone" />,
-    path: '/order-tracking',
+    path: '/#home',
     badge: true
   },
+
+  {
+    title: 'Projects',
+    path: '/#projects',
+    icon: <Iconify icon="solar:file-bold-duotone" />,
+  },
+
   {
     title: 'About',
     icon: <Iconify icon="solar:atom-bold-duotone" />,
-    path: '/how-order',
+    path: '/#about',
     // path: paths.components,
-  },
-  {
-    title: 'Projects',
-    path: '/pages',
-    icon: <Iconify icon="solar:file-bold-duotone" />,
   },
 ];
 

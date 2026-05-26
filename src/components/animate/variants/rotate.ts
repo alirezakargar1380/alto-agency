@@ -41,6 +41,24 @@ export const varRotate = (props?: VariantsType) => {
       },
     },
 
+    // IN
+    navad: {
+      initial: { opacity: 1, rotate: 0 },
+      animate: {
+        opacity: 1,
+        rotate: [0, 10, -10, 0],
+        transition: {
+          repeat: Infinity,
+          ...varTranEnter({ durationIn, easeIn })
+        },
+      },
+      exit: {
+        opacity: 1,
+        rotate: 0,
+        transition: varTranExit({ durationOut, easeOut }),
+      },
+    },
+
     // OUT
     out: {
       initial: { opacity: 1, rotate: 0 },

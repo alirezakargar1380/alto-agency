@@ -68,7 +68,7 @@ const teams: ITeam[] = [
 
 export default function HomeTeam() {
     return (
-        <Box py={8} width={'fit-content'} mx={'auto'}>
+        <Box py={8} width={'fit-content'} mx={'auto'} id="about">
             <m.div>
                 <Typography fontSize={30} width={1} fontFamily={'inter-medium'} textAlign={'center'} mb={'56px'}>Team</Typography>
             </m.div>

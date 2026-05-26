@@ -7,6 +7,7 @@ import MyCampContent from "src/sections/project/content/my-camp-content";
 import DefitunesContent from "src/sections/project/content/defitunes-content";
 import KaranoContent from "src/sections/project/content/karano-content";
 import MegaCalculatorContent from "src/sections/project/content/mega-calculator-content";
+import ClockContent from "src/sections/project/content/clock-content";
 
 const ali = paths.project.avatarSrc('ali.png');
 const me = paths.project.avatarSrc('alireza.png');
@@ -24,6 +25,10 @@ const label: Record<string, IProjectLabel> = {
         name: 'Live View',
         color: 'info'
     },
+    demo: {
+        name: 'Demo',
+        color: 'info'
+    },
     fullStack: {
         name: 'Full Stack Development',
         color: 'warning'
@@ -31,6 +36,16 @@ const label: Record<string, IProjectLabel> = {
 }
 
 export const projects: IProjectItem[] = [
+    {
+        title: '3D Customizable Wall Clock',
+        src: paths.project.imgSrc('watch.png'),
+        duration: '2026 - Now',
+        link: 'https://3-d-watch.vercel.app/',
+        lables: [label.fullStack, label.demo],
+        tools: [svg.ts, svg.nodeJs, svg.nestJs, svg.react, svg.figma, svg.mui, svg.mySql, svg.next],
+        teams: [me],
+        content: <ClockContent />
+    },
     {
         title: 'Karano',
         src: paths.project.imgSrc('karano.jpg'),
@@ -41,6 +56,16 @@ export const projects: IProjectItem[] = [
         teams: [me, ali],
         content: <KaranoContent />
     },
+    // {
+    //     title: 'Real Estate',
+    //     src: paths.project.imgSrc('karano.jpg'),
+    //     duration: '2026 - Now',
+    //     link: 'https://3-d-watch.vercel.app/',
+    //     lables: [label.fullStack, label.ui_ux, label.live],
+    //     tools: [svg.ts, svg.nodeJs, svg.nestJs, svg.react, svg.figma, svg.mui, svg.mySql, svg.next],
+    //     teams: [me, ali],
+    //     content: <KaranoContent />
+    // },
     {
         title: 'Winner Bazi',
         src: paths.project.imgSrc('winnerBazi.jpg'),
